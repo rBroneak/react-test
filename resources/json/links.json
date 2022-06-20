@@ -1,0 +1,18 @@
+{
+  "buyonline": [
+    {
+      "title": "Retailers Search",
+      "link": "./find-a-retailer.html"
+    },
+    {
+      "title": "PDP Buy Now",
+      "link": "./find-a-retailer.html"
+    }
+  ],
+  "sales": [
+    {
+      "title": "Sales Rep Search",
+      "link": "./dl-search.html"
+    }
+  ]
+}

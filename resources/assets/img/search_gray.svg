@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.2120196,15.7158837 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3165825,22.0976311 20.6834175,22.0976311 20.2928932,21.7071068 L15.7158837,17.2120196 C14.2759425,18.3326027 12.4659108,19 10.5,19 C5.80557963,19 2,15.1944204 2,10.5 C2,5.80557963 5.80557963,2 10.5,2 C15.1944204,2 19,5.80557963 19,10.5 C19,12.4659108 18.3326027,14.2759425 17.2120196,15.7158837 Z M10.5,17 C14.0898509,17 17,14.0898509 17,10.5 C17,6.91014913 14.0898509,4 10.5,4 C6.91014913,4 4,6.91014913 4,10.5 C4,14.0898509 6.91014913,17 10.5,17 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Search">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#9B9B9B" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Fill/Black" mask="url(#mask-2)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Rectangle-4" fill="#9B9B9B" fill-rule="evenodd" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

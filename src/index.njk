@@ -1,0 +1,35 @@
+{%- extends 'layouts/layout.njk' -%}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block content %}
+	<div class="pt-4 px-4 pb-4">
+		<h2 class="h1">Compare Products Updates</h2>
+		<hr>
+		<h4>Graco - Buy Online</h4>
+		<div class="px-3">
+			<ol class="py-0">
+				{% for item in links.buyonline -%}
+					<li>
+						<a href="{{ item.link }}">{{ item.title }}</a>
+					</li>
+				{%- endfor %}
+			</ol>
+		</div>
+		<h4>Graco - Sales Rep Visibility</h4>
+		<div class="px-3">
+			<ol class="py-0">
+				{% for item in links.sales -%}
+					<li>
+						<a href="{{ item.link }}">{{ item.title }}</a>
+					</li>
+				{%- endfor %}
+			</ol>
+		</div>
+		<footer>
+			<div class="site-footer__copyright">© Graco Inc. All rights reserved.</div>
+		</footer>
+	</div>
+{% endblock %}

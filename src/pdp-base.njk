@@ -1,0 +1,353 @@
+{% extends 'layouts/layout.njk' %}
+
+{% block header %}
+{% include "partials/header-basic.njk" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="slab-container">
+	<section class="slab slab--center">
+		<div class=" container-fluid">
+			<header class="slab__header">
+				<h1 class="slab__title h1 ">Find A Retailer</h1>
+				<p>
+					Graco partners with authorized retailers&nbsp;to provide you with local sales and service support,
+					application expertise and availability of inventory, including parts and accessories.</p>
+			</header>
+		</div>
+	</section>
+</div>
+
+<div class="distributorlocatorhomeowner">
+
+	<div class="js-tabbed-filters-dl"
+		 data-dl-filter-models-servlet-href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer/_jcr_content/par/distributorlocatorho.models.json">
+		<div class="container-fluid">
+			<div class="row slab-tab-content is-active  js-slab-tabs-content" id="locator-content">
+				<div class="col">
+					<input type="hidden" id="moreInfoText" class="moreInfoText" value="Expand">
+					<input type="hidden" id="lessInfoText" class="lessInfoText" value="Collapse">
+					<input type="hidden" id="salesText" class="salesText" value="Sales">
+					<input type="hidden" id="serviceText" class="serviceText" value="Service Center">
+					<input type="hidden" id="rentalText" class="rentalText" value="Rental">
+					<input type="hidden" id="directionsText" class="directionsText" value="Directions">
+					<input type="hidden" id="moreInfoStyle" class="moreInfoStyle">
+					<input type="hidden" id="regionCode" name="regionCode" value="north-america">
+					<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
+					<input type="hidden" id="useBing" class="useBing" value="false">
+					<form class="locator-form  pb-3  js-locator-form" action="/"
+						  onsubmit="findDistributors(); return false;">
+						<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
+						<input type="hidden" id="DLType" name="DLType" value="Homeowner">
+						<input type="hidden" id="familyWTB" name="familyWTB">
+						<input type="hidden" id="lang" name="lang" value="en">
+						<input type="hidden" id="locale" name="locale" value="en_US">
+						<input type="hidden" id="langCode" name="langCode" value="en">
+						{% include "partials/form-location-block.njk" %}
+						{% include "partials/form-search-by-block.njk" %}
+						<div class="pb-4 dl-wtb-text">
+							<hr>
+							<p>You are searching for:
+								<span class="resWTB"></span> (<a href="#"
+																 onclick="window.location = window.location.pathname + window.location.hash;">Change</a>)
+							</p>
+						</div>
+						<div
+							class="pb-4 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories is-active">
+							<div class="row">
+								<div class="col-12 mt-2 mb-3">
+									<label for="searchby-part-number" class="h7 color-gray text-align--left">
+										Part Number
+										<span class="color-bright-red">*</span>
+									</label>
+									<div class="g-input-icon-submit">
+										<input type="text" id="searchby-part-number" name="part-number"
+											   placeholder="Enter Part Number">
+										<button type="submit" class="dl-button">
+											<span class="sr-only">Submit</span>
+											<img class="g-icon" src="/img/search_gray.svg" alt="">
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="part-number-help">
+								<a href="#" class="part-number-help-link">
+									<img src="/img/tooltip_blue.svg">
+									Don't know your part number?
+								</a>
+							</div>
+						</div>
+						<div
+							class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories">
+							<div class="row">
+								<div class="col-12 mt-2 mb-3 ">
+									<label for="product-category" class="h7 color-gray text-align--left">
+										Product Category
+										<span class="color-bright-red">*</span>
+									</label>
+									<div class="g-select ">
+										<select name="product-category-DL" id="product-category"
+												class="color-light-gray">
+											<option value="">
+												Select a Category
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories">
+												Paint Sprayer Accessories
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayers">
+												Paint Sprayers
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 mt-2 mb-3 " style="display:none">
+									<label for="product-family" class="h7 color-gray text-align--left">
+										Product Family
+										<span class="color-bright-red">*</span>
+									</label>
+									<div class="g-select g-select--disabled">
+										<select name="product-family-DL" id="product-family" class="color-light-gray"
+												disabled="">
+											<option value="">
+												Select a Family
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/guns">
+												Airless Spray Guns
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/batteries-chargers">
+												Batteries &amp; Chargers
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayers/diy-series">
+												DIY Series
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/extensions">
+												Extensions
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/filters-strainers">
+												Filters &amp; Strainers
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/hoppers">
+												Hoppers
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/hoses">
+												Hoses
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/lacquer-conversion-kits">
+												Lacquer Conversion Kits
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/liners-containers">
+												Liners &amp; Containers
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayers/pro-series">
+												Pro Series
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayers/project-series">
+												Project Series
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/pump-replacements-parts">
+												Pump Replacements &amp; Parts
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/roller-systems-covers">
+												Roller Systems &amp; Covers
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/spray-tips-tip-guards">
+												Spray Tips &amp; Tip Guards
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/storage-cases">
+												Storage Cases
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/storage-fluid">
+												Storage Fluid
+											</option>
+											<option
+												value="/content/graco/north-america/en/homeowner/products/paint-sprayer-accessories/suction-tube-sets">
+												Suction Tube Sets
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-12 mt-2">
+									<label for="product-model" class="h7 color-gray text-align--left">Product Model
+									</label>
+									<div class="g-select">
+										<select name="product-model-DL" id="product-model" class="color-light-gray">
+											<option value="">Select a Model</option>
+											<option
+												value="AIRLESSACC,MAGNUMACC">DEWALT 20V MAX 2.0 Ah Lithium Ion Battery Pack
+											</option>
+											<option
+												value="AIRLESSACC,MAGNUMACC">DEWALT 20V MAX Lithium Ion Battery Charger
+											</option>
+											<option value="MAGNUMACC">DuraFlex Hose 1/4 in x 25 ft</option>
+											<option value="MAGNUMACC">DuraFlex Hose 1/4 in x 50 ft</option>
+											<option value="MAGNUMACC">DuraFlex Hose, 3/16 in x 25 ft</option>
+											<option value="MAGNUMACC">DuraFlex Whip Hose 3/16 in x 4 ft</option>
+											<option value="AIRLESSACC">Endurance Pump Lower Kit for Pro210ES</option>
+											<option value="AIRLESSACC,MAGNUMACC">FlexLiner Bags 32 oz 3 pack</option>
+											<option value="AIRLESSACC,MAGNUMACC">FlexLiner Bags 42 oz 3 pack</option>
+											<option value="MAGNUMACC">FlexLiner System 32 oz</option>
+											<option value="AIRLESSACC,MAGNUMACC">FlexLiner System 42 oz</option>
+											<option value="MAGNUMACC">Gun Filter 100 mesh</option>
+											<option value="MAGNUMACC">Gun Filter 60 mesh</option>
+											<option value="AIRLESSACC,MAGNUMACC">Handheld Filter 100 mesh</option>
+											<option value="AIRLESSACC,MAGNUMACC">Handheld Filter 60 mesh</option>
+											<option value="MAGNUMACC">Handheld Storage Bag</option>
+											<option value="MAGNUMACC">Heavy Duty Extension 40 in</option>
+											<option value="FPAAA">Hopper for Small Electric &amp; FinishPro AA Airless
+											</option>
+											<option value="MAGNUMACC">Hose Connector 1/4 in x 1/4 in</option>
+											<option value="MAGNUMACC">Inlet Strainer</option>
+											<option value="MAGNUMACC">Inlet Strainer for Pro210ES</option>
+											<option value="MAGNUMACC">InstaClean Filter</option>
+											<option value="AIRLESSACC">Kit, Pump Armor, 8 oz</option>
+											<option value="MAGNUMACC">Lacquer Conversion Kit for Cart Models</option>
+											<option value="MAGNUMACC">Lacquer Conversion Kit for Stand Models</option>
+											<option value="MAGNUMACC">Pressure Roller Kit</option>
+											<option value="MAGNUMACC">ProXChange Pump</option>
+											<option value="MAGNUMACC">Pump Armor 1 qt</option>
+											<option value="MAGNUMACC">Pump Armor, 1 gal</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 211</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 311</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 313</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 411</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 413</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 415</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 417</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 515</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 517</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 619</option>
+											<option value="MAGNUMACC">RAC IV SwitchTip 621</option>
+											<option value="MAGNUMACC">Repair Kit, Suction Tube, ProX17, ProX19, Stand
+											</option>
+											<option value="MAGNUMACC">Roller Cover 1/2 in nap</option>
+											<option value="MAGNUMACC">Roller Cover 3/4 in nap</option>
+											<option value="MAGNUMACC">SG2 Metal Spray Gun</option>
+											<option value="MAGNUMACC">SG3 Metal Spray Gun</option>
+											<option value="MAGNUMACC">Single Seal Gasket</option>
+											<option value="MAGNUMACC">Spray Tip Extension 10 in</option>
+											<option value="MAGNUMACC">Spray Tip Extension 15 in</option>
+											<option value="MAGNUMACC">Spray Tip Extension 20 in (50.8 cm)</option>
+											<option value="MAGNUMACC">Spray Tip Extension 30 in</option>
+											<option value="MAGNUMACC">Spray Tip Guard</option>
+											<option value="AIRLESSACC">Storage Case</option>
+											<option value="MAGNUMACC">Suction Tube Set for Cart Models</option>
+											<option value="MAGNUMACC">TC Pro PLUS Tip Guard</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 208</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 210</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 212</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 308</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 310</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 312</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 314</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 410</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 412</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 414</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 514</option>
+											<option value="MAGNUMACC">TC Pro SwitchTip 516</option>
+											<option value="MAGNUMACC">TC Pro Tip Guard</option>
+											<option value="AIRLESSACC">Triax Replacement Pump for Corded Handheld
+											</option>
+											<option value="AIRLESSACC">Triax Replacement Pump for Cordless Handheld
+											</option>
+											<option
+												value="AIRLESSACC">Triax Replacement Pump for MAX/PLUS Cordless Handheld
+											</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 209 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 211 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 309 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 311 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 313 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 315 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 411 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 413 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 415 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 417 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 515 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 517 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 519 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 521 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 619 Spray Tip</option>
+											<option value="TRUEAIRLESS,MAGNUMACC">TrueAirless 621 Spray Tip</option>
+											<option value="MAGNUMACC">TrueCoat 360 Large Cup Conversion Kit</option>
+											<option value="MAGNUMACC">TrueCoat 360 Spray Tips</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="help-modal" id="part-number-help-modal">
+							<a class="mobile-close-help"></a>
+							<div class="part-number-help-content">
+								<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
+								<img
+									src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
+							</div>
+							<div class="invalid-submit-msg" style="display:none">
+								<p>Please make a selection in all required fields.</p>
+							</div>
+						</div>
+						<div class="help-modal-invalid" id="invalid-submission-modal">
+							<a class="mobile-close-help"></a>
+							<div class="invalid-submit-msg alert-danger">
+								<p id="family-submit-error"
+								   style="display: none;">Please make a selection in all required fields.</p>
+								<p id="part-number-submit-error"
+								   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="dl-submit-button">
+								<button type="submit" href="#" class="btn btn--bg-blue w-100 dl-button">
+									Find Retailers
+									<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
+								</button>
+							</div>
+						</div>
+						<div class="pt-4 dl-apply-button" style="display:none">
+							<button type="submit" href="#" class="btn btn--bg-blue w-100">
+								Apply
+								<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
+							</button>
+						</div>
+						<div class="pt-4 dl-apply-button" style="display:none">
+							<button class="btn btn--bg-white w-100 dl-white-btn"
+									onclick="filterToggle(); return false;">
+								Cancel
+								<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
+							</button>
+						</div>
+					</form>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
+	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
+	{% include "partials/online-results-block.njk" %}
+	{% include "partials/customer-service-block.njk" %}
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

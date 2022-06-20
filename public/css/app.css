@@ -1,0 +1,28 @@
+.tabbed-filters__tab-content.is-active:before {
+  content: none; }
+
+.buyonlineitem {
+  max-width: 165px;
+  max-height: 130px; }
+
+.retailer-listing.collapsed {
+  max-height: 211px;
+  overflow: hidden;
+  position: relative; }
+  .retailer-listing.collapsed:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+99&0+0,0.1+33,1+80 */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 33%, white 80%, white 99%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(33%, rgba(255, 255, 255, 0.1)), color-stop(80%, white), color-stop(99%, white));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 33%, white 80%, white 99%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 33%, white 80%, white 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */ }

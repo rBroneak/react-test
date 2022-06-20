@@ -1,0 +1,25 @@
+<div
+	class="pb-4 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories {% if searchByPart === true %}is-active{% endif %}">
+	<div class="row">
+		<div class="col-12 mt-2 mb-3">
+			<label for="searchby-part-number" class="h7 color-gray text-align--left">
+				Part Number
+				<span class="color-bright-red">*</span>
+			</label>
+			<div class="g-input-icon-submit">
+				<input type="text" id="searchby-part-number" name="part-number"
+					   placeholder="Enter Part Number">
+				<button type="submit" class="dl-button">
+					<span class="sr-only">Submit</span>
+					<img class="g-icon" src="/img/search_gray.svg" alt="">
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="part-number-help">
+		<a href="#" class="part-number-help-link">
+			<img src="/img/tooltip_blue.svg">
+			Don't know your part number?
+		</a>
+	</div>
+</div>

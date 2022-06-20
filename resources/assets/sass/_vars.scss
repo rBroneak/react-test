@@ -1,0 +1,77 @@
+@import "colors";
+@import "mixins";
+
+$font-heading: "Overpass", "Helvetica", sans-serif;
+$font-body: "Roboto", "Arial", sans-serif;
+
+// matches bootstrap grid
+$small: 576px;
+$medium: 992px;
+$large: 992px;
+$lg: 1200px;
+
+$sm-start: ($small + 1); // Generate sm breakpoint's min width
+$md-start: ($medium + 1); // Generate md breakpoint's min width
+$lg-start: ($large + 1); // Generate lg breakpoint's min width
+$xl-start: ($lg + 1); // Generate xl breakpoint's min width
+
+// Breakpoints
+// Create breakpoint range statements to be used in media queries
+$breakpoint-sm-up: "only screen and (min-width: #{$sm-start})"; // sm-start -> up range
+$breakpoint-md-up: "only screen and (min-width: #{$md-start})"; // md-start -> up range
+$breakpoint-lg-up: "only screen and (min-width: #{$lg-start})"; // lg-start -> up range
+$breakpoint-xl-up: "only screen and (min-width: #{$xl-start})"; // xl-start -> up range
+
+// easing equations
+$linear: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+$ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+$easeIn: cubic-bezier(0.42, 0, 1, 1);
+$easeOut: cubic-bezier(0, 0, 0.58, 1);
+$easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// transitions
+$transition-ease: $easeOutQuad;
+$transition-speed: 0.3s;
+$transition-speed-fast: 0.1s;
+$transition-speed-slow: 0.5s;
+$transition-delay: 0.1s;
+
+$siteHeaderHeight: 76px;
+
+$box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+
+body::before {
+  display: none; /* Prevent from displaying. */
+  content: "xs";
+}
+
+@media #{$breakpoint-sm-up} {
+  body::before {
+    content: "sm";
+  }
+}
+
+@media #{$breakpoint-md-up} {
+  body::before {
+    content: "md";
+  }
+}
+
+@media #{$breakpoint-lg-up} {
+  body::before {
+    content: "lg";
+  }
+
+  body::before {
+    content: "lg";
+  }
+}
+
+@media #{$breakpoint-xl-up} {
+  body::before {
+    content: "xl";
+  }
+}

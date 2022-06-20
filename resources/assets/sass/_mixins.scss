@@ -1,0 +1,90 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  display: table;
+  table-layout: fixed;
+  content: "";
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+  clear: both;
+}
+
+@mixin placeholderSize(
+  $smallSize,
+  $largeSize,
+  $color,
+  $fontFamily,
+  $fontStyle: normal,
+  $textTransform: none,
+  $letterSpacing: 1px
+) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $smallSize;
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    letter-spacing: $letterSpacing;
+    text-transform: $textTransform;
+
+    @include breakpoint($x-small) {
+      font-size: $largeSize;
+    }
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+
+    /* Firefox 18- */
+    font-size: $smallSize;
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    letter-spacing: $letterSpacing;
+    text-transform: $textTransform;
+
+    @include breakpoint($x-small) {
+      font-size: $largeSize;
+    }
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+
+    /* Firefox 19+ */
+    font-size: $smallSize;
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    letter-spacing: $letterSpacing;
+    text-transform: $textTransform;
+
+    @include breakpoint($x-small) {
+      font-size: $largeSize;
+    }
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $smallSize;
+    font-family: $fontFamily;
+    font-style: $fontStyle;
+    letter-spacing: $letterSpacing;
+    text-transform: $textTransform;
+
+    @include breakpoint($x-small) {
+      font-size: $largeSize;
+    }
+  }
+}

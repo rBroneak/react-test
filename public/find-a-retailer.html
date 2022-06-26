@@ -1068,19 +1068,23 @@
 
 
 						
-						<div class="pt-4 dl-filters js-search-products-by hidden">
-	<div class="col-12">
-		<div class="h7 text-align--left ">Search Products By:
-			<span class="color-bright-red">*</span>
-		</div>
-		<div class="d-flex flex-wrap pt-2 pb-2">
-			<div class="g-radio-button">
-				<input type="radio" class="sr-only" id="choice-four" name="search-by" value="family" checked="">
-				<label for="choice-four">Material or Application</label>
-			</div>
-			<div class="g-radio-button">
-				<input type="radio" class="sr-only" id="choice-five" name="search-by" value="number">
-				<label for="choice-five">Part Number (Model)</label>
+						<div class="pt-4 dl-filters js-search-products-by ">
+	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
+		<div class="col-12 col-lg-12">
+			<div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+				<div class="col-auto h7 text-align--left mb-0 pl-0 py-2">Search Products By:
+					<span class="color-bright-red">*</span>
+				</div>
+				<div class="d-flex flex-wrap">
+					<div class="g-radio-button">
+						<input type="radio" class="sr-only" id="choice-four" name="search-by" value="family" checked="true">
+						<label for="choice-four">Material or Application</label>
+					</div>
+					<div class="g-radio-button">
+						<input type="radio" class="sr-only" id="choice-five" name="search-by" value="number">
+						<label for="choice-five">Part Number (Model)</label>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1098,39 +1102,40 @@
 						
 						<div
 	class="pb-4 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories ">
-	<div class="row">
-		<div class="col-12 mt-2 mb-3">
+	<div class="d-flex flex-wrap flex-row justify-content-center">
+		<div class="col-12 col-lg-12 mt-2 mb-3">
 			<label for="searchby-part-number" class="h7 color-gray text-align--left">
 				Part Number
 				<span class="color-bright-red">*</span>
 			</label>
 			<div class="g-input-icon-submit">
-				<input type="text" id="searchby-part-number" name="part-number"
-					   placeholder="Enter Part Number">
+				<input type="text" id="searchby-part-number" name="part-number" placeholder="Enter Part Number">
 				<button type="submit" class="dl-button">
 					<span class="sr-only">Submit</span>
 					<img class="g-icon" src="/img/search_gray.svg" alt="">
 				</button>
 			</div>
 		</div>
-	</div>
-	<div class="part-number-help">
-		<a href="#" class="part-number-help-link">
-			<img src="/img/tooltip_blue.svg">
-			Don't know your part number?
-		</a>
+		<div class="col-12 col-lg-12">
+			<div class="part-number-help">
+				<a href="#" class="part-number-help-link">
+					<img src="/img/tooltip_blue.svg">
+					Don't know your part number?
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
 
 						<div
-	class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories is-active">
-	<div class="row">
-		<div class="col-12 mt-2 mb-3 ">
+	class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories px-0 is-active">
+	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 ">
 			<label for="product-category" class="h7 color-gray text-align--left">
 				Product Category
 				<span class="color-bright-red">*</span>
 			</label>
-			<div class="g-select ">
+			<div class="g-select">
 				<select name="product-category-DL" id="product-category"
 						class="color-light-gray">
 					<option value="">
@@ -1147,7 +1152,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 mt-2 mb-3 " style="display:none">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 " style="display:none">
 			<label for="product-family" class="h7 color-gray text-align--left">
 				Product Family
 				<span class="color-bright-red">*</span>
@@ -1229,7 +1234,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 mt-2">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2">
 			<label for="product-model" class="h7 color-gray text-align--left">Product Model
 			</label>
 			<div class="g-select">

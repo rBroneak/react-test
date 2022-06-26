@@ -1,12 +1,12 @@
 <div
-	class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories {% if searchByPart !== true %}is-active{% endif %}">
-	<div class="row">
-		<div class="col-12 mt-2 mb-3 ">
+	class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories px-0 {% if searchByPart !== true %}is-active{% endif %}">
+	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 ">
 			<label for="product-category" class="h7 color-gray text-align--left">
 				Product Category
 				<span class="color-bright-red">*</span>
 			</label>
-			<div class="g-select ">
+			<div class="g-select">
 				<select name="product-category-DL" id="product-category"
 						class="color-light-gray">
 					<option value="">
@@ -23,7 +23,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 mt-2 mb-3 " style="display:none">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 " style="display:none">
 			<label for="product-family" class="h7 color-gray text-align--left">
 				Product Family
 				<span class="color-bright-red">*</span>
@@ -105,7 +105,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 mt-2">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2">
 			<label for="product-model" class="h7 color-gray text-align--left">Product Model
 			</label>
 			<div class="g-select">

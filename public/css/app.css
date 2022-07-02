@@ -1,9 +1,28 @@
+body::before {
+  display: none;
+  /* Prevent from displaying. */
+  content: "xs"; }
+
+@media only screen and (min-width: 577px) {
+  body::before {
+    content: "sm"; } }
+
+@media only screen and (min-width: 993px) {
+  body::before {
+    content: "md"; } }
+
+@media only screen and (min-width: 993px) {
+  body::before {
+    content: "lg"; }
+  body::before {
+    content: "lg"; } }
+
+@media only screen and (min-width: 1201px) {
+  body::before {
+    content: "xl"; } }
+
 .tabbed-filters__tab-content.is-active:before {
   content: none; }
-
-.buyonlineitem {
-  max-width: 165px;
-  max-height: 130px; }
 
 .retailer-listing.collapsed {
   max-height: 211px;
@@ -24,8 +43,31 @@
     background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 33%, white 80%, white 99%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 33%, white 80%, white 99%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
     /* IE6-9 */ }
+
+.buyonlineitem {
+  max-width: 165px;
+  max-height: 130px; }
 
 .sm-container {
   max-width: 900px; }
+
+.g-input-icon-submit input.location-search {
+  padding-right: 110px; }
+
+.geobutton {
+  outline: none;
+  border: none;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  height: 42px;
+  color: #9b9b9b; }
+  .geobutton span {
+    font-family: "Overpass", "Helvetica", sans-serif;
+    letter-spacing: .1rem;
+    font-size: .8125rem; }
+  .geobutton:hover {
+    color: #4a4a4a; }

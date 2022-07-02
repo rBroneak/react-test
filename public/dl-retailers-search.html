@@ -1017,47 +1017,45 @@
 						<input type="hidden" id="lang" name="lang" value="en">
 						<input type="hidden" id="locale" name="locale" value="en_US">
 						<input type="hidden" id="langCode" name="langCode" value="en">
-						<div class="row align-items-middle hidden">
+						<div class="d-flex flex-wrap flex-row justify-content-between hidden">
 
-	<div class="col-12 col-lg-7 d-flex dl-filters">
-		<button type="button" class="black-icon-button mr-3 align-self-start geobutton dl-filters"
-				onclick="fillLocationClick(); return false;" title="Use geolocation">
-			<span class="sr-only">Use geolocation</span>
-			<img src="/img/crosshairs_white.svg" alt="">
-		</button>
-		<div class="flex-1 dl-filters">
-			<label for="address" class="h7 text-align--left ">Location
-				<span class="color-bright-red">*</span>
-			</label>
-			<div class="g-input-icon-submit">
-				<input type="text" class="" id="address" name="address" placeholder="Enter City, State or Zip code"
-					   required="">
-			</div>
-			<div class="invalid-address-feedback invalid-feedback"
-				 style="display:none;">Address Not Found. Please enter City, State.
-			</div>
-		</div>
-	</div>
-
-	<div class="col-12 col-lg-5 pt-4 pt-lg-0 dl-filters">
-		<label for="search-radius" class="h7 text-align--left ">Search Within
+	<div class="col-12 col-lg-9">
+		<label for="address" class="h7 text-align--left ">Location
 			<span class="color-bright-red">*</span>
 		</label>
-		<div class="row" style="padding-left:15px;padding-right:15px;">
-			<div class="dl-select bg-transparent" style="width:35%">
-				<select name="search-radius" class="js-tabbed-content-select color-black pr-1" id="search-radius">
-					<option value="10" selected="">10</option>
-					<option value="25">25</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
-				</select>
-			</div>
-			<div class="dl-select bg-transparent" style="margin-left:-1px;width:65%">
-				<select name="search-radius-unit" class="js-tabbed-content-select color-black pr-1"
-						id="search-radius-unit">
-					<option value="mi">Miles</option>
-					<option value="km">Kilometers</option>
-				</select>
+		<button type="button" class="mt-0 geobutton dl-filters"
+				onclick="fillLocationClick(); return false;" title="Use geolocation">
+			<span>SEARCH</span>
+			<i class="bi bi-search p-1"></i>
+		</button>
+		<div class="g-input-icon-submit ">
+			<input class="location-search" type="text" class="" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
+		</div>
+		<div class="invalid-address-feedback invalid-feedback"
+			 style="display:none;">Address Not Found. Please enter City, State.
+		</div>
+	</div>
+	<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
+		<div class="d-flex flex-wrap flex-row justify-content-end">
+			<label for="search-radius" class="h7 text-align--left ">Search Within
+				<span class="color-bright-red">*</span>
+			</label>
+			<div class="d-flex">
+				<div class="dl-select bg-transparent">
+					<select name="search-radius" class="js-tabbed-content-select color-black" id="search-radius">
+						<option value="10" selected="">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</div>
+				<div class="dl-select bg-transparent" >
+					<select name="search-radius-unit" class="js-tabbed-content-select color-black"
+							id="search-radius-unit">
+						<option value="mi">Miles</option>
+						<option value="km">Kilometers</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>

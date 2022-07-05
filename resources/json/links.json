@@ -1,17 +1,28 @@
 {
   "buyonline": [
     {
-      "title": "Retailers Search",
+      "title": "Retailers Search // Get FORM LAYOUT MATCHING SERVICE",
       "link": "./find-a-retailer.html"
     },
     {
-      "title": "PDP Buy Now",
+      "title": "PDP Buy Now // Send to retailer layout with product showing Get FORM LAYOUT MATCHING SERVICE",
       "link": "./find-a-retailer.html"
+    },{
+      "title": "Service Center Search (no results)",
+      "link": "./find-a-service-center.html"
     }
   ],
   "sales": [
     {
-      "title": "Sales Rep Search",
+      "title": "Sales Rep Search // Basic Search",
+      "link": "./dl-search.html"
+    },
+    {
+      "title": "Sales Rep Search // Distributors (use results block)",
+      "link": "./dl-search.html"
+    },
+    {
+      "title": "Sales Rep Search // From Product",
       "link": "./dl-search.html"
     }
   ]

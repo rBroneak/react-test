@@ -1,0 +1,71 @@
+<div class="d-flex flex-wrap flex-row justify-content-start locator-form{% if showLocation !== true %}hidden{% endif %}">
+
+	<div class="col-12 col-lg-5">
+		<label for="address" class="h7 text-align--left">
+			Location <span class="color-bright-red">*</span>
+		</label>
+		<div class="d-flex flex-wrap flex-row">
+			<div class="col-auto px-0">
+				<button type="button" class="black-icon-button mt-0 geobutton dl-filters" onclick="fillLocationClick(); return false;" title="Use geolocation">
+					<span class="sr-only">Use geolocation</span>
+					<img src="https://www.graco.com/img/crosshairs_white.svg" alt="Get Location">
+				</button>
+			</div>
+			<div class="col pr-0">
+				<div class="g-input-icon-submit p-12">
+					<input class="location-search" type="text" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
+				</div>
+				<div class="invalid-address-feedback invalid-feedback"
+					 style="display:none;">Address Not Found. Please enter City, State.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 col-lg-4 pt-4 pt-lg-0 dl-filters">
+		<div class="d-flex flex-wrap flex-row justify-content-start">
+			<div class="col-12 p-0">
+				<label for="search-radius" class="h7 text-align--left ">Search Within
+					<span class="color-bright-red">*</span>
+				</label>
+			</div>
+			<div class="col-4 p-0">
+				<div class="dl-select bg-transparent ">
+					<select name="search-radius" class="color-black" id="search-radius">
+						<option value="10" selected="">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-8 p-0">
+				<div class="dl-select bg-transparent">
+					<select name="search-radius-unit" class="color-black"
+							id="search-radius-unit">
+						<option value="mi">Miles</option>
+						<option value="km">Kilometers</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
+		<div class="d-flex flex-wrap flex-row justify-content-start">
+			<div class="col-12 p-0">
+			<label for="search-radius" class="h7 text-align--left">Services</label>
+			</div>
+			<div class="col-12 p-0">
+				<div class="dl-select bg-transparent">
+					<select name="search-radius" class="color-black" id="services">
+						<option value="Service Center" selected="">Service Center</option>
+						<option value="Service Type 1">Service Type 1</option>
+						<option value="Service Type 2">Service Type 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

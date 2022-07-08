@@ -13,7 +13,7 @@
 			<ol class="py-0">
 				{% for item in links.buyonline -%}
 					<li>
-						<a href="{{ item.link }}">{{ item.title }}</a>
+						<a target="_blank" href="{{ item.link }}">{{ item.title }}</a>
 					</li>
 				{%- endfor %}
 			</ol>
@@ -23,7 +23,7 @@
 			<ol class="py-0">
 				{% for item in links.sales -%}
 					<li>
-						<a href="{{ item.link }}">{{ item.title }}</a>
+						<a target="_blank" href="{{ item.link }}">{{ item.title }}</a>
 					</li>
 				{%- endfor %}
 			</ol>

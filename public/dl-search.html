@@ -1011,28 +1011,31 @@
 					<input type="hidden" id="useBing" class="useBing" value="false">
 					<div class="d-flex flex-wrap flex-row justify-content-center">
 						<div class="col-12 col-lg-10">
-						<form class="locator-form pb-3 js-locator-form" action="/"
-						  onsubmit="findDistributors(); return false;">
-						<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
-						<input type="hidden" id="DLType" name="DLType" value="Homeowner">
-						<input type="hidden" id="familyWTB" name="familyWTB">
-						<input type="hidden" id="lang" name="lang" value="en">
-						<input type="hidden" id="locale" name="locale" value="en_US">
-						<input type="hidden" id="langCode" name="langCode" value="en">
-						
-						<div class="d-flex flex-wrap flex-row justify-content-between ">
+							<form class="locator-form pb-3 js-locator-form" action="/"
+								  onsubmit="findDistributors(); return false;">
+								<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
+								<input type="hidden" id="DLType" name="DLType" value="Homeowner">
+								<input type="hidden" id="familyWTB" name="familyWTB">
+								<input type="hidden" id="lang" name="lang" value="en">
+								<input type="hidden" id="locale" name="locale" value="en_US">
+								<input type="hidden" id="langCode" name="langCode" value="en">
+								
+								<div class="d-flex flex-wrap flex-row justify-content-between ">
 
 	<div class="col-12 col-lg-9">
 		<label for="address" class="h7 text-align--left ">Location
 			<span class="color-bright-red">*</span>
 		</label>
-		<button type="button" class="mt-0 geobutton dl-filters"
-				onclick="fillLocationClick(); return false;" title="Use geolocation">
+		<!--
+		using submit to toggle the native form validation
+		changed class name and title
+		-->
+		<button type="submit" class="mt-0 address-search dl-filters" title="Enter Your address">
 			<span>SEARCH</span>
 			<i class="bi bi-search p-1"></i>
 		</button>
-		<div class="g-input-icon-submit ">
-			<input class="location-search" type="text" class="" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
+		<div class="g-input-icon-submit">
+			<input class="location-search wide" type="text" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
 		</div>
 		<div class="invalid-address-feedback invalid-feedback"
 			 style="display:none;">Address Not Found. Please enter City, State.
@@ -1040,20 +1043,24 @@
 	</div>
 	<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
 		<div class="d-flex flex-wrap flex-row justify-content-end">
-			<label for="search-radius" class="h7 text-align--left ">Search Within
-				<span class="color-bright-red">*</span>
-			</label>
-			<div class="d-flex">
-				<div class="dl-select bg-transparent">
-					<select name="search-radius" class="js-tabbed-content-select color-black" id="search-radius">
+			<div class="col-12 p-0">
+				<label for="search-radius" class="h7 text-align--left ">Search Within
+					<span class="color-bright-red">*</span>
+				</label>
+			</div>
+			<div class="col-4 p-0">
+				<div class="dl-select bg-transparent ">
+					<select name="search-radius" class="color-black" id="search-radius">
 						<option value="10" selected="">10</option>
 						<option value="25">25</option>
 						<option value="50">50</option>
 						<option value="100">100</option>
 					</select>
 				</div>
-				<div class="dl-select bg-transparent" >
-					<select name="search-radius-unit" class="js-tabbed-content-select color-black"
+			</div>
+			<div class="col-8 p-0">
+				<div class="dl-select bg-transparent">
+					<select name="search-radius-unit" class="color-black"
 							id="search-radius-unit">
 						<option value="mi">Miles</option>
 						<option value="km">Kilometers</option>
@@ -1066,8 +1073,8 @@
 </div>
 
 
-						
-						<div class="pt-4 dl-filters js-search-products-by ">
+								
+								<div class="pt-4 dl-filters js-search-products-by ">
 	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
 		<div class="col-12 col-lg-12">
 			<div class="d-flex flex-wrap flex-md-nowrap align-items-center">
@@ -1098,11 +1105,11 @@
 </div>
 
 
-						
-						<div
+								
+								<div
 	class="pb-4 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories ">
 	<div class="d-flex flex-wrap flex-row justify-content-center">
-		<div class="col-12 col-lg-12 mt-2 mb-3">
+		<div class="col-12 col-lg-12 mt-2 mb-3 px-0">
 			<label for="searchby-part-number" class="h7 color-gray text-align--left">
 				Part Number
 				<span class="color-bright-red">*</span>
@@ -1126,7 +1133,7 @@
 	</div>
 </div>
 
-						<div
+								<div
 	class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories px-0 is-active">
 	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
 		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 ">
@@ -1344,48 +1351,27 @@
 	</div>
 </div>
 
-						<div class="help-modal" id="part-number-help-modal">
-							<a class="mobile-close-help"></a>
-							<div class="part-number-help-content">
-								<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
-								<img
-									src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
-							</div>
-							<div class="invalid-submit-msg" style="display:none">
-								<p>Please make a selection in all required fields.</p>
-							</div>
-						</div>
-						<div class="help-modal-invalid" id="invalid-submission-modal">
-							<a class="mobile-close-help"></a>
-							<div class="invalid-submit-msg alert-danger">
-								<p id="family-submit-error"
-								   style="display: none;">Please make a selection in all required fields.</p>
-								<p id="part-number-submit-error"
-								   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
-							</div>
-						</div>
-						<div class="col-12">
-							<div class="dl-submit-button">
-								<button type="submit" href="#" class="btn btn--bg-blue w-100 dl-button">
-									Find Retailers
-									<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
-								</button>
-							</div>
-						</div>
-						<div class="pt-4 dl-apply-button" style="display:none">
-							<button type="submit" href="#" class="btn btn--bg-blue w-100">
-								Apply
-								<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
-							</button>
-						</div>
-						<div class="pt-4 dl-apply-button" style="display:none">
-							<button class="btn btn--bg-white w-100 dl-white-btn"
-									onclick="filterToggle(); return false;">
-								Cancel
-								<img src="/img/map_pin_white.svg" alt="" class="btn__icon">
-							</button>
-						</div>
-					</form>
+								<div class="help-modal" id="part-number-help-modal">
+									<a class="mobile-close-help"></a>
+									<div class="part-number-help-content">
+										<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
+										<img
+											src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
+									</div>
+									<div class="invalid-submit-msg" style="display:none">
+										<p>Please make a selection in all required fields.</p>
+									</div>
+								</div>
+								<div class="help-modal-invalid" id="invalid-submission-modal">
+									<a class="mobile-close-help"></a>
+									<div class="invalid-submit-msg alert-danger">
+										<p id="family-submit-error"
+										   style="display: none;">Please make a selection in all required fields.</p>
+										<p id="part-number-submit-error"
+										   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

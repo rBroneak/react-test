@@ -53,45 +53,6 @@
 								{% set searchByPart = false %}
 								{% include "partials/form-part-block.njk" %}
 								{% include "partials/form-application-block.njk" %}
-
-								<hr>
-								<header class="py-2">
-									<h4>SERVICE NEARBY</h4>
-								</header>
-
-								{% set showLocation = true %}
-								{% include "partials/form-location-block.njk" %}
-								<div class="help-modal" id="part-number-help-modal">
-									<a class="mobile-close-help"></a>
-									<div class="part-number-help-content">
-										<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
-										<img
-												src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
-									</div>
-									<div class="invalid-submit-msg" style="display:none">
-										<p>Please make a selection in all required fields.</p>
-									</div>
-								</div>
-								<div class="help-modal-invalid" id="invalid-submission-modal">
-									<a class="mobile-close-help"></a>
-									<div class="invalid-submit-msg alert-danger">
-										<p id="family-submit-error"
-										   style="display: none;">Please make a selection in all required fields.</p>
-										<p id="part-number-submit-error"
-										   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
-									</div>
-								</div>
-
-								<section class="d-flex flex-wrap flex-row justify-content-between">
-									<div class="col-6">
-										<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
-											for pricing and availability. Some product subject to special order status.</p>
-									</div>
-									<div class="col-auto">
-										<p>0 results</p>
-									</div>
-								</section>
-
 							</form>
 						</div>
 					</div>
@@ -100,12 +61,50 @@
 
 
 			<div class="col-12">
-				{% set results = true %}
-				<section id="results" class="d-flex flex-wrap flex-row justify-content-center">
-					<div class="result col-12 col-lg-10 border border-light-gray rounded mb-4 {% if results == true %}hidden{% endif %}">
-						<p class="color-light-gray text-center py-4">Search for dealers and stores but city, state, or Zip code</p>
+				<hr>
+				<header class="py-2">
+					<h4>SERVICE NEARBY</h4>
+				</header>
+
+				{% set showLocation = true %}
+				<div class="row">
+				{% include "partials/form-get-location-block.njk" %}
+
+				<div class="help-modal" id="part-number-help-modal">
+					<a class="mobile-close-help"></a>
+					<div class="part-number-help-content">
+						<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
+						<img src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
 					</div>
-					<div class="result col-12 col-lg-10 border border-light-gray rounded mb-4 {% if results !== true %}hidden{% endif %}">
+					<div class="invalid-submit-msg" style="display:none">
+						<p>Please make a selection in all required fields.</p>
+					</div>
+				</div>
+				<div class="help-modal-invalid" id="invalid-submission-modal">
+					<a class="mobile-close-help"></a>
+					<div class="invalid-submit-msg alert-danger">
+						<p id="family-submit-error"
+						   style="display: none;">Please make a selection in all required fields.</p>
+						<p id="part-number-submit-error"
+						   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
+					</div>
+				</div>
+				</div>
+				<section class="d-flex flex-wrap flex-row justify-content-between">
+					<div class="col-6 pl-0">
+						<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
+							for pricing and availability. Some product subject to special order status.</p>
+					</div>
+					<div class="col-auto pr-0">
+						<p>0 results</p>
+					</div>
+				</section>
+				{% set results = false %}
+				<section id="results" class="d-flex flex-wrap flex-row justify-content-center">
+					<div class="result col-12 border border-light-gray rounded mb-4 {% if results == true %}hidden{% endif %}">
+						<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
+					</div>
+					<div class="result col-12 border border-light-gray rounded mb-4 {% if results !== true %}hidden{% endif %}">
 						<p class="color-light-gray text-center py-4">I am a result</p>
 					</div>
 				</section>

@@ -1,16 +1,20 @@
 {
   "buyonline": [
     {
-      "title": "Retailers Search No Retailer Results",
+      "title": "Retailers Search No Retailer Results ✅",
       "link": "./find-a-retailer.html"
     },
     {
-      "title": "Retailers With Retailer Results",
+      "title": "Retailers With Retailer Results ✅",
       "link": "./find-a-retailer-results.html"
     },
     {
-      "title": "PDP Buy Now // Send to retailer layout with product showing",
-      "link": "./find-a-retailer.html"
+      "title": "PDP Buy Now - No Results product in header",
+      "link": "./pdp-no-results.html"
+    },
+    {
+      "title": "PDP Buy Now - Results Get product in header",
+      "link": "./pdp-results.html"
     },{
       "title": "Service Center Search (no results) ✅",
       "link": "./find-a-service-center.html"
@@ -18,15 +22,15 @@
   ],
   "sales": [
     {
-      "title": "Sales Rep Search // Basic Search",
-      "link": "./dl-search.html"
-    },
-    {
-      "title": "Sales Rep Search // Distributors (use results block)",
+      "title": "Sales Rep Search // Basic Search ✅",
       "link": "./dl-search.html"
     },
     {
       "title": "Sales Rep Search // From Product",
+      "link": "./dl-search.html"
+    },
+    {
+      "title": "Sales Rep Search // With Distributor Results and Filter",
       "link": "./dl-search.html"
     }
   ]

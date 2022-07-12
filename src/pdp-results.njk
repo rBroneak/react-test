@@ -1,11 +1,10 @@
 {% extends 'layouts/layout.njk' %}
 
 {% block header %}
-	{% include "partials/header-basic.njk" %}
+{% include "partials/header-basic.njk" %}
 {% endblock %}
 
 {% block content %}
-
 	<div class="slab-container">
 		<section class="slab slab--center">
 			<div class=" container-fluid">
@@ -15,6 +14,9 @@
 						Graco partners with authorized retailers&nbsp;to provide you with local sales and service support,
 						application expertise and availability of inventory, including parts and accessories.</p>
 				</header>
+				<section class="bg-light-gray">
+					<h2 class="m-0 text-white">GET PRODUCT IN HERE</h2>
+				</section>
 			</div>
 		</section>
 	</div>
@@ -114,10 +116,11 @@
 					<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
 						<!-- No result -->
 						{% if results !== true %}
-						<div class="result col-12 border border-light-gray rounded mb-4">
-							<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
-						</div>
+							<div class="result col-12 border border-light-gray rounded mb-4">
+								<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
+							</div>
 						{% endif %}
+						{% if results == true %}
 						<!-- result header -->
 						<div class="row">
 							<header class="result-header col-12 py-2">
@@ -137,10 +140,9 @@
 								</div>
 							</header>
 							<!-- results -->
-							{% if results == true %}
-							<div class="result col-12 mb-4">
-								{% include "partials/location-result-block.njk" %}
-							</div>
+								<div class="result col-12 mb-4">
+									{% include "partials/location-result-block.njk" %}
+								</div>
 							{% endif %}
 						</div>
 					</section>

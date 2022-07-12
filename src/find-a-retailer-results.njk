@@ -107,16 +107,36 @@
 						<h4 class="h4 py-2">BUY NEARBY</h4>
 					</header>
 
+					{% set results = true %}
 					{% set showLocation = true %}
 					{% include "partials/form-get-location-block.njk" %}
 
-					{% set results = false %}
-					<section id="results" class="d-flex flex-wrap flex-row justify-content-center">
+					<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
+						<!-- No result -->
 						<div class="result col-12 border border-light-gray rounded mb-4 {% if results == true %}hidden{% endif %}">
 							<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
 						</div>
-						<div class="result col-12 border border-light-gray rounded mb-4 {% if results !== true %}hidden{% endif %}">
-							<p class="color-light-gray text-center py-4">I am a result</p>
+						<!-- result -->
+						<div class="row">
+							<header class="result-header col-12 py-2">
+								<div class="d-flex">
+									<div class="col-3">
+										<p class="small color-light-gray m-0 p-0 bold">Sold by</p>
+									</div>
+									<div class="col-3">
+										<p class="small color-light-gray m-0 p-0 bold">Details</p>
+									</div>
+									<div class="col-3">
+										<p class="small color-light-gray m-0 p-0 bold">Services Offered</p>
+									</div>
+									<div class="col-3">
+										<p class="small color-light-gray m-0 p-0 bold">Distance</p>
+									</div>
+								</div>
+							</header>
+							<div class="result col-12 mb-4 {% if results !== true %}hidden{% endif %}">
+								{% include "partials/location-result-block.njk" %}
+							</div>
 						</div>
 					</section>
 				</div>

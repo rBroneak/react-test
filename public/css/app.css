@@ -24,6 +24,18 @@ body::before {
 .tabbed-filters__tab-content.is-active:before {
   content: none; }
 
+.online-retailers .btn span:first-child {
+  display: inline; }
+
+.online-retailers .btn span:last-child {
+  display: none; }
+
+.online-retailers .btn.showing span:first-child {
+  display: none; }
+
+.online-retailers .btn.showing span:last-child {
+  display: inline; }
+
 .retailer-listing.collapsed {
   max-height: 211px;
   overflow: hidden;
@@ -46,9 +58,23 @@ body::before {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
     /* IE6-9 */ }
 
-.buyonlineitem {
-  max-width: 165px;
-  max-height: 130px; }
+.result {
+  font-family: "Roboto", "Arial", sans-serif; }
+
+@media only screen and (min-width: 577px) {
+  .retailer-listing {
+    margin-left: -8px;
+    margin-right: -8px; } }
+
+@media only screen and (min-width: 577px) {
+  .buyonlineitem {
+    max-width: calc(20% - 16px);
+    max-height: 180px; } }
+
+@media only screen and (min-width: 993px) {
+  .buyonlineitem {
+    max-width: calc(16.666% - 16px);
+    max-height: 135px; } }
 
 .sm-container {
   max-width: 900px; }
@@ -79,3 +105,6 @@ body::before {
     font-size: .8125rem; }
   .address-search:hover {
     color: #4a4a4a; }
+
+.primary-color {
+  color: #0033ab; }

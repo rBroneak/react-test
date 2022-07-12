@@ -36,10 +36,10 @@
 					<input type="hidden" id="regionCode" name="regionCode" value="north-america">
 					<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
 					<input type="hidden" id="useBing" class="useBing" value="false">
-					<div class="d-flex flex-wrap flex-row justify-content-center">
 
+					<div class="d-flex flex-wrap flex-row justify-content-center">
 						<div class="col-12 col-lg-10">
-							<form class="locator-form  pb-3 js-locator-form" action="/" onsubmit="findDistributors(); return false;">
+							<form class="locator-form js-locator-form" action="/" onsubmit="findDistributors(); return false;">
 								<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
 								<input type="hidden" id="DLType" name="DLType" value="Homeowner">
 								<input type="hidden" id="familyWTB" name="familyWTB">
@@ -59,46 +59,15 @@
 				</div>
 			</div>
 
-
 			<div class="col-12">
 				<hr>
-				<header class="py-2">
-					<h4>SERVICE NEARBY</h4>
+				<header>
+					<h4 class="h4 py-2">SERVICE NEARBY</h4>
 				</header>
 
 				{% set showLocation = true %}
-				<div class="row">
 				{% include "partials/form-get-location-block.njk" %}
 
-				<div class="help-modal" id="part-number-help-modal">
-					<a class="mobile-close-help"></a>
-					<div class="part-number-help-content">
-						<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
-						<img src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
-					</div>
-					<div class="invalid-submit-msg" style="display:none">
-						<p>Please make a selection in all required fields.</p>
-					</div>
-				</div>
-				<div class="help-modal-invalid" id="invalid-submission-modal">
-					<a class="mobile-close-help"></a>
-					<div class="invalid-submit-msg alert-danger">
-						<p id="family-submit-error"
-						   style="display: none;">Please make a selection in all required fields.</p>
-						<p id="part-number-submit-error"
-						   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
-					</div>
-				</div>
-				</div>
-				<section class="d-flex flex-wrap flex-row justify-content-between">
-					<div class="col-6 pl-0">
-						<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
-							for pricing and availability. Some product subject to special order status.</p>
-					</div>
-					<div class="col-auto pr-0">
-						<p>0 results</p>
-					</div>
-				</section>
 				{% set results = false %}
 				<section id="results" class="d-flex flex-wrap flex-row justify-content-center">
 					<div class="result col-12 border border-light-gray rounded mb-4 {% if results == true %}hidden{% endif %}">
@@ -112,12 +81,13 @@
 		</div>
 	</div>
 
-	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
-	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
-
 	{% set showOnlineResults = false %}
 	{% include "partials/online-results-block.njk" %}
 	{% include "partials/customer-service-block.njk" %}
+
+	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
+	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
+
 </div>
 {% endblock %}
 

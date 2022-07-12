@@ -1,5 +1,5 @@
-<div class="d-flex flex-wrap flex-row justify-content-start locator-form{% if showLocation !== true %}hidden{% endif %}">
-
+<div class="row ">
+<div class="d-flex flex-wrap flex-row justify-content-start locator-form pb-2 {% if showLocation !== true %}hidden{% endif %}">
 	<div class="col-12 col-lg-5">
 		<label for="address" class="h7 text-align--left">
 			Location <span class="color-bright-red">*</span>
@@ -69,3 +69,14 @@
 	</div>
 
 </div>
+</div>
+<section class="d-flex flex-wrap flex-row justify-content-between">
+	<div class="col-6 pl-0">
+		<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
+			for pricing and availability. Some product subject to special order status.</p>
+	</div>
+	<div class="col-auto pr-0">
+		{% if results !== true %}<p>0 results</p>{% endif %}
+		{% if results == true %}<p>2 results results withing 10 miles of 55401</p>{% endif %}
+	</div>
+</section>

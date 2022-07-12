@@ -1,8 +1,12 @@
 {
   "buyonline": [
     {
-      "title": "Retailers Search // check design",
+      "title": "Retailers Search No Retailer Results",
       "link": "./find-a-retailer.html"
+    },
+    {
+      "title": "Retailers With Retailer Results",
+      "link": "./find-a-retailer-results.html"
     },
     {
       "title": "PDP Buy Now // Send to retailer layout with product showing",

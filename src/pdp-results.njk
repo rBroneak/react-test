@@ -14,9 +14,7 @@
 						Graco partners with authorized retailers&nbsp;to provide you with local sales and service support,
 						application expertise and availability of inventory, including parts and accessories.</p>
 				</header>
-				<section class="bg-light-gray">
-					<h2 class="m-0 text-white">GET PRODUCT IN HERE</h2>
-				</section>
+				{% include "partials/pdp-w-toggle-block.njk" %}
 			</div>
 		</section>
 	</div>
@@ -24,7 +22,7 @@
 	<div class="distributorlocatorhomeowner">
 		<div class="js-tabbed-filters-dl" data-dl-filter-models-servlet-href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer/_jcr_content/par/distributorlocatorho.models.json">
 			<div class="container-fluid">
-				<div class="row slab-tab-content is-active js-slab-tabs-content" id="locator-content">
+				<div class="row slab-tab-content is-active js-slab-tabs-content hidden" id="locator-content">
 					<div class="col">
 						<input type="hidden" id="moreInfoText" class="moreInfoText" value="Expand">
 						<input type="hidden" id="lessInfoText" class="lessInfoText" value="Collapse">

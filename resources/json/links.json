@@ -9,11 +9,11 @@
       "link": "./find-a-retailer-results.html"
     },
     {
-      "title": "PDP Buy Now - No Results product in header",
+      "title": "PDP Buy Now - No Results product in header ✅",
       "link": "./pdp-no-results.html"
     },
     {
-      "title": "PDP Buy Now - Results Get product in header",
+      "title": "PDP Buy Now - open close locations",
       "link": "./pdp-results.html"
     },{
       "title": "Service Center Search (no results) ✅",
@@ -22,16 +22,28 @@
   ],
   "sales": [
     {
-      "title": "Sales Rep Search // Basic Search ✅",
+      "title": "Sales Rep Search WTB ✅",
       "link": "./dl-search.html"
     },
     {
-      "title": "Sales Rep Search // From Product",
+      "title": "Sales Rep Search WTB // With Distributor Results and Filter",
       "link": "./dl-search.html"
     },
     {
-      "title": "Sales Rep Search // With Distributor Results and Filter",
-      "link": "./dl-search.html"
+      "title": "PDP Sales Rep // From Product (need link to product page)",
+      "link": "#"
+    },
+    {
+      "title": "PDP Sales Team // From Product (need link to product page)",
+      "link": "#"
+    },
+    {
+      "title": "PDP no location // From Product (need link to product page)",
+      "link": "#"
+    },
+    {
+      "title": "Product Family (which version and is it sticky)",
+      "link": "#"
     }
   ]
 }

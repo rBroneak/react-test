@@ -13,7 +13,7 @@
       "link": "./pdp-no-results.html"
     },
     {
-      "title": "PDP Buy Now - open close locations",
+      "title": "PDP Buy Now ✅",
       "link": "./pdp-results.html"
     },{
       "title": "Service Center Search (no results) ✅",
@@ -26,8 +26,20 @@
       "link": "./dl-search.html"
     },
     {
-      "title": "Sales Rep Search WTB // With Distributor Results and Filter",
+      "title": "Sales Rep Search WTB No Results ✅",
+      "link": "./dl-search-no-results.html"
+    },
+    {
+      "title": "Sales Rep Search WTB Results",
+      "link": "./dl-search-results.html"
+    },
+    {
+      "title": "Sales Rep Search WTB From Product",
       "link": "./dl-search.html"
+    },
+    {
+      "title": "Category Sales Rep",
+      "link": "#"
     },
     {
       "title": "PDP Sales Rep // From Product (need link to product page)",
@@ -35,10 +47,6 @@
     },
     {
       "title": "PDP Sales Team // From Product (need link to product page)",
-      "link": "#"
-    },
-    {
-      "title": "PDP no location // From Product (need link to product page)",
       "link": "#"
     },
     {

@@ -1,7 +1,7 @@
 {
   "private": true,
   "description": "A modern front-end boilerplate for building fast, organized and standardized web apps or sites.",
-  "author": "Tonik <hello@tonik.pl> (http://tonik.pl)",
+  "author": "rBroneak - Rework of a template by - Tonik (http://tonik.pl)",
   "version": "2.0.0",
   "scripts": {
     "dev": "npm run development",

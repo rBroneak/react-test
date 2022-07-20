@@ -11,8 +11,11 @@
 }
 
 // online-retailer button text toggle
-.online-retailers {
-  .btn {
+// show more location and retailers nested toggle
+.online-retailers,
+.show-more {
+  .btn,
+  a {
     span {
       &:first-child {
         display: inline;
@@ -34,8 +37,24 @@
   }
 }
 
+// show more location and retailers nested toggle
+.collection {
+  .nested {
+    display: none;
+  }
+  > footer {
+    display:  none;
+  }
+  &.showing {
+    .nested:nth-child(-n+6),
+    > footer {
+      display: block;
+    }
+  }
+}
+
+
 // creates a fade on the collapsed retailer list
-// collappsed is handled on the
 .retailer-listing {
   &.collapsed {
     max-height: 211px;
@@ -60,12 +79,8 @@
   }
 }
 
-.result {
-  font-family: $font-body;
-}
 
-
-// pull the retailer listings flush
+// pull the buy online retailer listings flush
 .retailer-listing {
   @media #{$breakpoint-sm-up} {
     margin-left: -8px;
@@ -85,10 +100,7 @@
   }
 }
 
-.sm-container {
-  max-width: 900px;
-}
-
+// location search
 .g-input-icon-submit {
   input.location-search {
     padding-left: 12px !important;
@@ -98,7 +110,6 @@
     padding-right: 110px;
   }
 }
-
 
 .black-icon-button {
   max-height: 42px;
@@ -126,8 +137,29 @@
   }
 }
 
+// location and distributor results
+.result {
+  font-family: $font-body;
+}
+
 // decorator classes
 .primary-color {
   color: $color-blue;
 }
 
+// layout
+.sm-container {
+  max-width: 900px;
+}
+
+// type
+.p-large {
+  font-size: 1.1rem;
+}
+
+// button variation
+.btn {
+  &.btn--small {
+    font-size: .8125rem;;
+  }
+}

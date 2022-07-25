@@ -34,7 +34,6 @@
 						<input type="hidden" id="regionCode" name="regionCode" value="north-america">
 						<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
 						<input type="hidden" id="useBing" class="useBing" value="false">
-
 						<div class="d-flex flex-wrap flex-row justify-content-center">
 							<div class="col-12 col-lg-10">
 								<form class="locator-form js-locator-form" action="/"
@@ -45,6 +44,7 @@
 									<input type="hidden" id="lang" name="lang" value="en">
 									<input type="hidden" id="locale" name="locale" value="en_US">
 									<input type="hidden" id="langCode" name="langCode" value="en">
+									<!-- UPDATE -->
 									{% set showLocation = false %}
 									{% include "partials/form-location-block.njk" %}
 
@@ -58,8 +58,7 @@
 										<a class="mobile-close-help"></a>
 										<div class="part-number-help-content">
 											<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
-											<img
-													src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
+											<img src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
 										</div>
 										<div class="invalid-submit-msg" style="display:none">
 											<p>Please make a selection in all required fields.</p>
@@ -79,7 +78,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-12">
 					<hr>
 					<header>
@@ -100,13 +98,11 @@
 					</header>
 					{% include "partials/online-results-block.njk" %}
 				</div>
-
 				<div class="col-12">
 					<hr>
 					<header>
 						<h4 class="h4 py-2">BUY NEARBY</h4>
 					</header>
-
 					{% set showLocation = true %}
 					{% include "partials/form-get-location-block.njk" %}
 
@@ -122,12 +118,9 @@
 				</div>
 			</div>
 		</div>
-
 		{% include "partials/customer-service-block.njk" %}
-
 		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
 		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
-
 	</div>
 {% endblock %}
 

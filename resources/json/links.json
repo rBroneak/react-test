@@ -15,7 +15,8 @@
     {
       "title": "PDP Buy Now ✅",
       "link": "./pdp-results.html"
-    },{
+    },
+    {
       "title": "Service Center Search (no results) ✅",
       "link": "./find-a-service-center.html"
     }
@@ -30,12 +31,12 @@
       "link": "./dl-search-no-results.html"
     },
     {
-      "title": "Sales Rep Search WTB Results",
+      "title": "Sales Rep Search WTB Results ✅",
       "link": "./dl-search-results.html"
     },
     {
-      "title": "Sales Rep Search WTB From Product",
-      "link": "./dl-search.html"
+      "title": "Sales Rep Search WTB From Product ✅",
+      "link": "./dl-search-from-product.html"
     },
     {
       "title": "Category Sales Rep",

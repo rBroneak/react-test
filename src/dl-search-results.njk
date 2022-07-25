@@ -1,136 +1,115 @@
 {% extends 'layouts/layout.njk' %}
 
 {% block header %}
-{% include "partials/header-basic.njk" %}
+	{% include "partials/header-basic.njk" %}
 {% endblock %}
 
 {% block content %}
 
-<div class="slab-container">
-	<section class="slab slab--center">
-		<div class=" container-fluid">
-			<header class="slab__header">
-				<h1 class="slab__title h1">Where to Buy</h1>
-				<p>
-					Graco partners with authorized retailers&nbsp;to provide you with local sales and service support,
-					application expertise and availability of inventory, including parts and accessories.</p>
-			</header>
-		</div>
-	</section>
-</div>
+	<div class="slab-container">
+		<section class="slab slab--center">
+			<div class=" container-fluid">
+				<header class="slab__header">
+					<h1 class="slab__title h1">Where to Buy</h1>
+					<p>
+						Graco partners with authorized retailers&nbsp;to provide you with local sales and service support,
+						application expertise and availability of inventory, including parts and accessories.</p>
+				</header>
+			</div>
+		</section>
+	</div>
 
-<div class="distributorlocatorhomeowner">
+	<div class="distributorlocatorhomeowner">
+		<div class="js-tabbed-filters-dl"
+			 data-dl-filter-models-servlet-href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer/_jcr_content/par/distributorlocatorho.models.json">
+			<div class="container-fluid">
+				<div class="row slab-tab-content is-active  js-slab-tabs-content" id="locator-content">
+					<div class="col">
+						<input type="hidden" id="moreInfoText" class="moreInfoText" value="Expand">
+						<input type="hidden" id="lessInfoText" class="lessInfoText" value="Collapse">
+						<input type="hidden" id="salesText" class="salesText" value="Sales">
+						<input type="hidden" id="serviceText" class="serviceText" value="Service Center">
+						<input type="hidden" id="rentalText" class="rentalText" value="Rental">
+						<input type="hidden" id="directionsText" class="directionsText" value="Directions">
+						<input type="hidden" id="moreInfoStyle" class="moreInfoStyle">
+						<input type="hidden" id="regionCode" name="regionCode" value="north-america">
+						<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
+						<input type="hidden" id="useBing" class="useBing" value="false">
+						<div class="d-flex flex-wrap flex-row justify-content-center">
+							<div class="col-12 col-lg-10">
+								<form class="locator-form pb-3 js-locator-form" action="/"
+									  onsubmit="findDistributors(); return false;">
+									<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
+									<input type="hidden" id="DLType" name="DLType" value="Homeowner">
+									<input type="hidden" id="familyWTB" name="familyWTB">
+									<input type="hidden" id="lang" name="lang" value="en">
+									<input type="hidden" id="locale" name="locale" value="en_US">
+									<input type="hidden" id="langCode" name="langCode" value="en">
+									<!-- UPDATE -->
+									{% set showLocation = true %}
+									{% include "partials/form-location-block.njk" %}
 
-	<div class="js-tabbed-filters-dl"
-		 data-dl-filter-models-servlet-href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer/_jcr_content/par/distributorlocatorho.models.json">
-		<div class="container-fluid">
-			<div class="row slab-tab-content is-active  js-slab-tabs-content" id="locator-content">
-				<div class="col">
-					<input type="hidden" id="moreInfoText" class="moreInfoText" value="Expand">
-					<input type="hidden" id="lessInfoText" class="lessInfoText" value="Collapse">
-					<input type="hidden" id="salesText" class="salesText" value="Sales">
-					<input type="hidden" id="serviceText" class="serviceText" value="Service Center">
-					<input type="hidden" id="rentalText" class="rentalText" value="Rental">
-					<input type="hidden" id="directionsText" class="directionsText" value="Directions">
-					<input type="hidden" id="moreInfoStyle" class="moreInfoStyle">
-					<input type="hidden" id="regionCode" name="regionCode" value="north-america">
-					<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
-					<input type="hidden" id="useBing" class="useBing" value="false">
-					<div class="d-flex flex-wrap flex-row justify-content-center">
-						<div class="col-12 col-lg-10">
-							<form class="locator-form pb-3 js-locator-form" action="/"
-								  onsubmit="findDistributors(); return false;">
-								<input type="hidden" id="_charset_" name="_charset_" value="UTF-8">
-								<input type="hidden" id="DLType" name="DLType" value="Homeowner">
-								<input type="hidden" id="familyWTB" name="familyWTB">
-								<input type="hidden" id="lang" name="lang" value="en">
-								<input type="hidden" id="locale" name="locale" value="en_US">
-								<input type="hidden" id="langCode" name="langCode" value="en">
-								{% set showLocation = true %}
-								{% include "partials/form-location-block.njk" %}
+									{% set showSearchByChoices = true %}
+									{% include "partials/form-search-by-block.njk" %}
 
-								{% set showSearchByChoices = true %}
-								{% include "partials/form-search-by-block.njk" %}
-
-								{% set searchByPart = false %}
-								{% include "partials/form-part-block.njk" %}
-								{% include "partials/form-application-block.njk" %}
-								<div class="help-modal" id="part-number-help-modal">
-									<a class="mobile-close-help"></a>
-									<div class="part-number-help-content">
-										<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
-										<img
-											src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
+									{% set searchByPart = false %}
+									{% include "partials/form-part-block.njk" %}
+									{% include "partials/form-application-block.njk" %}
+									<div class="help-modal" id="part-number-help-modal">
+										<a class="mobile-close-help"></a>
+										<div class="part-number-help-content">
+											<p>Graco product part numbers are typically 6 characters and can be found on the product label, manual or box as PART/MODEL NO. See example below.</p>
+											<img src="https://www.graco.com/content/dam/graco/design/emea/landingpage/hpcf/product_serial_series_number_King.jpg">
+										</div>
+										<div class="invalid-submit-msg" style="display:none">
+											<p>Please make a selection in all required fields.</p>
+										</div>
 									</div>
-									<div class="invalid-submit-msg" style="display:none">
-										<p>Please make a selection in all required fields.</p>
+									<div class="help-modal-invalid" id="invalid-submission-modal">
+										<a class="mobile-close-help"></a>
+										<div class="invalid-submit-msg alert-danger">
+											<p id="family-submit-error" style="display: none;">Please make a selection in all required fields.</p>
+											<p id="part-number-submit-error" style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
+										</div>
 									</div>
-								</div>
-								<div class="help-modal-invalid" id="invalid-submission-modal">
-									<a class="mobile-close-help"></a>
-									<div class="invalid-submit-msg alert-danger">
-										<p id="family-submit-error"
-										   style="display: none;">Please make a selection in all required fields.</p>
-										<p id="part-number-submit-error"
-										   style="display: block;">Please enter your part number in the provided field and select a suggested part number.</p>
-									</div>
-								</div>
-							</form>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-12">
-				<hr>
-				<header>
-					<h4 class="h4 py-2">FIND NEARBY</h4>
-				</header>
-
-				{% set results = true %}
-				{% include "partials/form-product-filter-block.njk" %}
-
-				<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
-					<!-- No result -->
-					{% if results !== true %}
-						<div class="result col-12 border border-light-gray rounded mb-4">
-							<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
-						</div>
-					{% endif %}
-					{% if results == true %}
-					<!-- result header -->
-					<div class="row">
-						<header class="result-header col-12 py-2">
-							<div class="d-flex">
-								<div class="col-3">
-									<p class="small color-light-gray m-0 p-0 bold">Sold by</p>
-								</div>
-								<div class="col-3">
-									<p class="small color-light-gray m-0 p-0 bold">Details</p>
-								</div>
-								<div class="col-3">
-									<p class="small color-light-gray m-0 p-0 bold">Services Offered</p>
-								</div>
-								<div class="col-3">
-									<p class="small color-light-gray m-0 p-0 bold">Distance</p>
-								</div>
+				{%- include "partials/sales-expert-block.njk" -%}
+				<div class="col-12">
+					<hr>
+					<header>
+						<h4 class="h4 py-2">FIND NEARBY</h4>
+					</header>
+					{% set results = true %}
+					{%- include "partials/form-product-filter-block.njk" -%}
+					<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
+						{%- if results !== true -%}
+							<!-- No result -->
+							<div class="result col-12 border border-light-gray rounded mb-4">
+								<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
 							</div>
-						</header>
-						<!-- results -->
-						<div class="result col-12 mb-4">
-							{% include "partials/distributor-result-block.njk" %}
+						{%- endif -%}
+						{%- if results == true -%}
+						<!-- result header -->
+						<div class="row">
+							{% include "partials/results-header-block.njk" %}
+							<!-- results -->
+							<div class="result col-12 mb-4">
+								{% include "partials/distributor-result-block.njk" -%}
+							</div>
+							{%- endif -%}
 						</div>
-						{% endif %}
-					</div>
-				</section>
+					</section>
+				</div>
 			</div>
 		</div>
+		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
+		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
+		{% include "partials/customer-service-block.njk" %}
 	</div>
-
-	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
-	<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
-	{% include "partials/customer-service-block.njk" %}
-</div>
 {% endblock %}
 
 {% block footer %}

@@ -1,7 +1,7 @@
 {% extends 'layouts/layout.njk' %}
 
 {% block header %}
-{% include "partials/header-basic.njk" %}
+	{% include "partials/header-basic.njk" %}
 {% endblock %}
 
 {% block content %}
@@ -34,7 +34,6 @@
 						<input type="hidden" id="regionCode" name="regionCode" value="north-america">
 						<input type="hidden" id="pageLanguage" name="pageLanguage" value="en">
 						<input type="hidden" id="useBing" class="useBing" value="false">
-
 						<div class="d-flex flex-wrap flex-row justify-content-center">
 							<div class="col-12 col-lg-10">
 								<form class="locator-form js-locator-form" action="/"
@@ -45,6 +44,7 @@
 									<input type="hidden" id="lang" name="lang" value="en">
 									<input type="hidden" id="locale" name="locale" value="en_US">
 									<input type="hidden" id="langCode" name="langCode" value="en">
+									<!-- UPDATE -->
 									{% set showLocation = false %}
 									{% include "partials/form-location-block.njk" %}
 
@@ -79,7 +79,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-12">
 					<hr>
 					<header>
@@ -100,20 +99,17 @@
 					</header>
 					{% include "partials/online-results-block.njk" %}
 				</div>
-
 				<div class="col-12">
 					<hr>
 					<header>
 						<h4 class="h4 py-2">BUY NEARBY</h4>
 					</header>
-
 					{% set results = false %}
 					{% set showLocation = true %}
 					{% include "partials/form-get-location-block.njk" %}
-
 					<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
-						<!-- No result -->
 						{% if results !== true %}
+							<!-- No result -->
 							<div class="result col-12 border border-light-gray rounded mb-4">
 								<p class="color-light-gray text-center py-4">Search for dealers and stores by city, state, or Zip code</p>
 							</div>
@@ -138,21 +134,18 @@
 								</div>
 							</header>
 							<!-- results -->
-								<div class="result col-12 mb-4">
-									{% include "partials/location-result-block.njk" %}
-								</div>
+							<div class="result col-12 mb-4">
+								{% include "partials/location-result-block.njk" %}
+							</div>
 							{% endif %}
 						</div>
 					</section>
 				</div>
 			</div>
 		</div>
-
 		{% include "partials/customer-service-block.njk" %}
-
 		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerPrograms.js"></script>
 		<script src="https://www.graco.com/content/dam/graco/design/corporate/js/dealerWTBText.js"></script>
-
 	</div>
 {% endblock %}
 

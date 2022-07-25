@@ -1,7 +1,9 @@
 @import "vars";
 @import "colors";
 
-// removes blue border below the search by form toggle
+/* UPDATED CSS HERE */
+
+/* removes blue border below the search by form toggle */
 .tabbed-filters__tab-content {
   &.is-active {
     &:before {
@@ -10,8 +12,10 @@
   }
 }
 
-// online-retailer button text toggle
-// show more location and retailers nested toggle
+/*
+  online-retailer button text toggle
+  show more location and retailers nested toggle
+*/
 .online-retailers,
 .show-more {
   .btn,
@@ -37,7 +41,7 @@
   }
 }
 
-// show more location and retailers nested toggle
+/* show more location and retailers nested toggle */
 .collection {
   .nested {
     display: none;
@@ -54,7 +58,7 @@
 }
 
 
-// creates a fade on the collapsed retailer list
+/* creates a fade on the collapsed retailer list */
 .retailer-listing {
   &.collapsed {
     max-height: 211px;
@@ -80,7 +84,7 @@
 }
 
 
-// pull the buy online retailer listings flush
+/* pull the buy online retailer listings flush */
 .retailer-listing {
   @media #{$breakpoint-sm-up} {
     margin-left: -8px;
@@ -88,7 +92,7 @@
   }
 }
 
-// changes width of retailer card links
+/* changes width of retailer card links */
 .buyonlineitem {
   @media #{$breakpoint-sm-up} {
     max-width: calc(20% - 16px);
@@ -100,7 +104,7 @@
   }
 }
 
-// location search
+/* location search */
 .g-input-icon-submit {
   input.location-search {
     padding-left: 12px !important;
@@ -137,27 +141,27 @@
   }
 }
 
-// location and distributor results
+/* location and distributor results */
 .result {
   font-family: $font-body;
 }
 
-// decorator classes
+/* decorator classes */
 .primary-color {
   color: $color-blue;
 }
 
-// layout
+/* layout */
 .sm-container {
   max-width: 900px;
 }
 
-// type
+/* type */
 .p-large {
   font-size: 1.1rem;
 }
 
-// button variation
+/* button variation */
 .btn {
   &.btn--small {
     font-size: .8125rem;;

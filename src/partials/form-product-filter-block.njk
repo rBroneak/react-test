@@ -1,5 +1,6 @@
+<!-- UPDATE -->
 <div class="d-flex flex-wrap flex-row">
-	<div class="col-12 col-sm-6 col-lg-4 mt-2 mb-3 pl-0">
+	<div class="col-12 col-sm-6 col-lg-4 mt-2 mb-3 px-0 pl-sm-0 pr-sm-3 ">
 		<label for="product-category" class="h7 color-gray text-align--left">
 			Filter By Product Family
 			<span class="color-bright-red">*</span>
@@ -18,7 +19,7 @@
 			</select>
 		</div>
 	</div>
-	<div class="col-12 col-sm-6 col-lg-3 mt-2 mb-3 pr-0">
+	<div class="col-12 col-sm-6 col-lg-3 mt-2 mb-3 px-0 pr-sm-0 pl-sm-3 ">
 		<label for="product-category" class="h7 color-gray text-align--left">
 			Services
 			<span class="color-bright-red">*</span>
@@ -38,14 +39,20 @@
 		</div>
 	</div>
 </div>
-
 <section class="d-flex flex-wrap flex-row justify-content-between">
 	<div class="col-6 pl-0">
-		<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
-			for pricing and availability. Some product subject to special order status.</p>
+		<p class="small color-light-gray">
+			Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
+			for pricing and availability. Some product subject to special order status.
+		</p>
 	</div>
 	<div class="col-auto pr-0">
-		{% if results !== true %}<p>0 results</p>{% endif %}
-		{% if results == true %}<p>2 results withing 10 miles of 55401</p>{% endif %}
+		<p>
+			{%- if results !== true -%}
+				0 results
+			{%- else -%}
+				2 results withing 10 miles of 55402
+			{%- endif -%}
+		</p>
 	</div>
 </section>

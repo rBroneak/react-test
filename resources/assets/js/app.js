@@ -71,4 +71,10 @@
     showMore(this);
   });
 
+  // Tool Tips
+  $('[data-toggle="tooltip"]').tooltip({
+    position: { my: "left+15 center", at: "right center" }
+    
+  });
+
 }());

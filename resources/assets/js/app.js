@@ -74,7 +74,24 @@
   // Tool Tips
   $('[data-toggle="tooltip"]').tooltip({
     position: { my: "left+15 center", at: "right center" }
-    
+
   });
 
+
 }());
+// STICKY
+// $(window).scroll(function() {
+//   var $sticky = $(".sticky-wrap");
+//   var $stickyOffset = $sticky.offset().top;
+//   var $windowOffset = $(window).scrollTop();
+//
+//   console.log($windowOffset);
+//   console.log($stickyOffset);
+//
+//   if ($windowOffset >= $stickyOffset) {
+//     $sticky.addClass('sticky');
+//   } else {
+//     $sticky.removeClass('sticky');
+//   }
+
+// });

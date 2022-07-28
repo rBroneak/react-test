@@ -1,0 +1,157 @@
+{% extends 'layouts/layout.njk' %}
+
+{% block header %}
+	{% include "partials/header-basic.njk" %}
+{% endblock %}
+
+{% block content %}
+	<section class="hero hero--single-angle hero--center hero--short " style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,0.7) 100%), url(https://www.graco.com/content/dam/pim/graco/aftd/afd/duroflow-pump-1600x700.jpg/jcr:content/renditions/cq5dam.web.1600.1600.jpeg); background-position: center; background-size: cover;">
+		<div class="container-fluid">
+			<div class="hero__wrapper">
+				<div class="hero__content">
+					<h2 class="h7 color-white"></h2>
+					<h1 class="h1 color-white shadow--gray">Sealant Supply Systems &amp; Pumps</h1>
+					<p class="color-white">Graco's supply systems and pumps reliably deliver sealants and adhesives from a wide range of containers. Supply systems and pumps reliably move viscous materials at ambient temperature and can also provide warm and hot melt material conditioning. Designed with advanced pump and motor technologies, Graco adhesive supply systems and pumps help maximize your plant's production capacity and are designed to integrate with all manufacturing lines.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- UPDATE REP CARD -->
+	{%- include "partials/sales-expert-sticky-block.njk" -%}
+	<!-- placholder div to force sticky -->
+	<div style="height: 1000px; background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(0,0,0,1) 100%);"></div>
+{% endblock %}
+
+{% block footer %}
+	<!-- FPO FOOTER -->
+	<footer class="site-footer">
+		<div class="site-footer__top">
+			<div class="container-fluid">
+				<h3 class="text-white">FPO</h3>
+				<div class="site-footer__nav">
+					<div class="site-footer__nav-section  js-footer-nav-section">
+						<h2 class="site-footer__nav-section-title color-light-gray">Products &amp; Solutions</h2>
+						<button class="site-footer__nav-section-title-mobile js-footer-section-toggle">
+							Products &amp; Solutions
+							<img src="/img/chevron_down_gray.svg" alt="">
+						</button>
+						<ul class="site-footer__nav-section-items">
+							<li>
+								<a href="/us/en/homeowner.html" target="_self" class="link--light-gray">Homeowner</a>
+							</li>
+							<li>
+								<a href="/us/en/contractor.html" target="_self" class="link--light-gray">Contractor</a>
+							</li>
+							<li>
+								<a href="/us/en/vehicle-service.html" target="_self" class="link--light-gray">Vehicle Service &amp; Heavy Equipment</a>
+							</li>
+							<li>
+								<a href="/us/en/in-plant-manufacturing.html" target="_self" class="link--light-gray">Industrial, Manufacturing &amp; Processing</a>
+							</li>
+						</ul>
+					</div>
+					<div class="site-footer__nav-section  js-footer-nav-section">
+						<h2 class="site-footer__nav-section-title color-light-gray">Support</h2>
+						<button class="site-footer__nav-section-title-mobile js-footer-section-toggle">
+							Support
+							<img src="/img/chevron_down_gray.svg" alt="">
+						</button>
+						<ul class="site-footer__nav-section-items">
+							<li>
+								<a href="/us/en/support/parts-search.html" target="_self" class="link--light-gray">Find Manuals &amp; Parts</a>
+							</li>
+							<li>
+								<a href="/us/en/support/faq.html" target="_self" class="link--light-gray">Frequently Asked Questions</a>
+							</li>
+							<li>
+								<a href="/us/en/support/find-a-service-center.html" target="_self" class="link--light-gray">Find a Service Center</a>
+							</li>
+							<li>
+								<a href="/us/en/support/contact-us.html" target="_self" class="link--light-gray">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="site-footer__nav-section  js-footer-nav-section">
+						<h2 class="site-footer__nav-section-title color-light-gray">How to Buy</h2>
+						<button class="site-footer__nav-section-title-mobile js-footer-section-toggle">
+							How to Buy
+							<img src="/img/chevron_down_gray.svg" alt="">
+						</button>
+						<ul class="site-footer__nav-section-items">
+							<li>
+								<a href="/us/en/how-to-buy/find-a-distributor.html" target="_self" class="link--light-gray">Find a Distributor</a>
+							</li>
+							<li>
+								<a href="/us/en/how-to-buy/events.html" target="_self" class="link--light-gray">Visit an Event</a>
+							</li>
+							<li>
+								<a href="/us/en/how-to-buy/request-a-demo.html" target="_self" class="link--light-gray">Request a Demonstration</a>
+							</li>
+							<li>
+								<a href="/us/en/how-to-buy/request-a-quote.html" target="_self" class="link--light-gray">Request a Quote</a>
+							</li>
+							<li>
+								<a href="/us/en/how-to-buy/talk-with-an-expert.html" target="_self" class="link--light-gray">Talk to an Expert</a>
+							</li>
+						</ul>
+					</div>
+					<div class="site-footer__nav-section">
+						<img id="footer_image" src="https://www.graco.com/content/dam/graco/corporate/images/Misc/A-Plus-Service-Logo-120px.png" class="site-footer__flag float-lg-right" alt="United States Flag">
+					</div>
+				</div>
+				<div class="site-footer__social">
+					<div>
+						<div class="site-footer__social-links">
+							<a href="https://www.youtube.com/channel/UCaqSEs4-vy3Uwy7CxDsbX3A" target="_blank" class="site-footer__social-link">
+								<img src="https://www.graco.com/content/dam/graco/corporate/images/icons/youtube_gray.svg" alt="Graco Inc on Youtube">
+							</a>
+							<a href="http://www.linkedin.com/company/graco" target="_blank" class="site-footer__social-link">
+								<img src="https://www.graco.com/content/dam/graco/corporate/images/icons/linked_in_gray.svg" alt="Graco Inc on LinkedIn">
+							</a>
+							<a href="http://www.twitter.com/GracoInc" target="_blank" class="site-footer__social-link">
+								<img src="https://www.graco.com/content/dam/graco/corporate/images/icons/twitter_gray.svg" alt="Graco Inc on Twitter">
+							</a>
+							<a href="https://www.facebook.com/GracoCareers" target="_blank" class="site-footer__social-link">
+								<img src="https://www.graco.com/content/dam/graco/corporate/images/icons/facebook_sq_gray.svg" alt="Graco Inc on Facebook">
+							</a>
+							<a href="/us/en/social-media.html" target="_self" class="site-footer__social-link link--light-gray">
+								Graco Social
+							</a>
+						</div>
+					</div>
+					<a href="/globalselector.html" class="site-footer__social-region">
+						<img src="/img/globe_gray.svg" alt="" class="g-icon">
+						<span>North America/English</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer__bottom">
+			<div class="bottom-footer-flex">
+				<div class="site-footer__bottom-content">
+					<div class="site-footer__copyright">© Graco Inc. All rights reserved.</div>
+					<ul class="site-footer__bottom-links">
+						<li>
+							<a href="/us/en/privacy-policy.html" target="_self">Privacy Notice</a>
+						</li>
+						<li>
+							<a href="/us/en/terms-of-service.html" target="_self">Terms of Service</a>
+						</li>
+						<li>
+							<a href="/us/en/trademarks.html" target="_self">Trademarks</a>
+						</li>
+						<li>
+							<a href="/us/en/patents.html" target="_self">Patents</a>
+						</li>
+						<li>
+							<a href="https://www.graco.com/content/dam/graco/corporate/literature/misc/californiatransparency/Graco_CA_Disclosure_EN.pdf" target="_self">CA Supply Chains Act</a>
+						</li>
+					</ul>
+				</div>
+				<div class="site-footer__bottom-logo">
+					<img src="./img/graco_logo_white.svg">
+				</div>
+			</div>
+		</div>
+	</footer>
+{% endblock %}

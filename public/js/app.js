@@ -80,5 +80,21 @@
 
   });
 })();
+// STICKY
+// $(window).scroll(function() {
+//   var $sticky = $(".sticky-wrap");
+//   var $stickyOffset = $sticky.offset().top;
+//   var $windowOffset = $(window).scrollTop();
+//
+//   console.log($windowOffset);
+//   console.log($stickyOffset);
+//
+//   if ($windowOffset >= $stickyOffset) {
+//     $sticky.addClass('sticky');
+//   } else {
+//     $sticky.removeClass('sticky');
+//   }
+
+// });
 
 }());

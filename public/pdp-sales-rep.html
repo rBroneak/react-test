@@ -1,0 +1,925 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="keywords" content="AFD"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<script type="module" src="/js/FormHandler.js"></script>
+	<script type="module" src="https://www.graco.com/etc/designs/graco-redesign/clientlibs/components/js/datePickerLanguages.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Overpass%3A700%2C900%7CRoboto%3A400%2C400i%2C700%2C700i" rel="stylesheet"/>
+	<link media="all" rel="stylesheet" href="https://www.graco.com/etc/designs/graco-redesign/clientlibs/main/css/main.min.css"/>
+	<link media="all" rel="stylesheet" href="/css/app.css"/>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script async src="https://apps.bazaarvoice.com/deployments/gracoconv/redesign_site/production/en_US/bv.js"></script>
+</head>
+<body class="scroll-area" data-spy="scroll" data-offset="0"><div class="body-content">
+	<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<nav class="utility-bar navbar navbar-expand-sm">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/us/en/contractor.njk" target="_self">
+						<span class="nav-link-text">FOR DISTRIBUTORS</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/us/en/vehicle-service.njk" target="_self">
+						<span class="nav-link-text">FOR SUPPLIERS</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/us/en/in-plant-manufacturing.njk" target="_self">
+						<span class="nav-link-text">FOR INVESTORS </span>
+						<img src="/img/external_link_gray.svg" class="g-icon" alt="Region">
+					</a>
+				</li>
+				<li class="nav-item utility-bar__region">
+					<a class="nav-link " href="/globalselector.njk">
+						<img src="/img/globe_gray.svg" class="g-icon" alt="Region">
+						<span class="nav-link-text">North America/English</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<header class="site-header site-header--segment">
+	<div class="container-fluid">
+		<nav class="navbar">
+			<div class="site-header__brand">
+				<a class="navbar-brand" href="/us/en.njk">
+					<span class="sr-only">Graco</span>
+					<img src="/img/graco_logo.svg" class="site-header__brand-logo d-inline-block align-top" alt="Graco">
+				</a>
+				<div class="site-header__segment-description">
+					<h2 class="h7">
+						<a class="nav-link p-0" href="/us/en/homeowner.njk">
+							<span class="nav-link-text">Homeowner</span>
+						</a>
+					</h2>
+				</div>
+			</div>
+			<div class="site-header__desktop-nav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link js-toggle-search-input" href="#">
+							<span class="nav-link-text">Search</span>
+							<img src="/img/search.svg" class="g-icon" alt="Search">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/us/en/homeowner/support/contact-us.njk" target="_self">
+							<span class="nav-link-text">Contact Us</span>
+						</a>
+					</li>
+					<div class="site-header-search__desktop-nav js-segment-header-search-block">
+						<form class="site-header__search" id="segment-search-form" action="/us/en/homeowner/search.njk">
+							<button type="submit" class="site-header__search-btn submit g-icon">
+								<img src="/img/search_gray.svg" class="site-header__search-icon g-icon" alt="Search">
+							</button>
+							<input type="text" id="site-search-field" name="q" data-search-config-lang="en" data-search-config-country="north-america" data-search-config-segment="homeowner-products" class="site-header__search-input ui-autocomplete-input ui-autocomplete-loading js-segment-header-search-input" placeholder="Type to search" autocomplete="off">
+						</form>
+					</div>
+				</ul>
+			</div>
+			<div class="site-header__mobile-nav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link js-toggle-mobile-search" href="#">
+							<img src="/img/search.svg" class="site-header__mobile-icon" alt="Search">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/us/en/homeowner/support/contact-us.njk" target="_self">
+							<img src="/img/help_question.svg" class="site-header__mobile-icon" alt="Contact Us">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-mobile-menu-toggle mobile-menu-icon" href="#">
+							<img src="/img/menu.svg" class="site-header__mobile-icon" alt="Main Menu">
+							<img src="/img/close.svg" class="site-header__mobile-icon" alt="Close Main Menu">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<nav class="site-navigation navbar ">
+	<div class="container-fluid no-padding">
+		<ul class="site-navigation__top-nav nav">
+			<li class="nav-item">
+				<a class="nav-link h7 js-top-nav-link megNavAction  " href="#shelf_0">Products</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link h7 js-top-nav-link megNavAction  " href="#shelf_1">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link h7 js-top-nav-link megNavAction  " href="#shelf_2">How To Buy</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link h7 js-top-nav-link megNavAction  " href="#shelf_3">Owner Support</a>
+			</li>
+		</ul>
+		<div class="site-navigation__nav-shelves js-site-nav-shelves">
+			<div class="nav-shelf">
+				<div class="container-fluid">
+					<div class="nav-shelf__section nav-shelf__section--progressive nav-shelf__section--progressive-single js-nav-shelf-section js-nav-section-progressive-single" id="shelf_0">
+						<div class="nav-shelf__section-panel js-nav-section-panel">
+							<span class="nav-shelf__title">
+								<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products.njk">
+									View All Products
+								</a>
+							</span>
+							<ul class="nav-shelf__items">
+								<li class="nav-shelf__progressive-link-item  js-progressive-link-item">
+									<a href="#shelf_0_paint-sprayers" class="nav-shelf__progressive-link js-progressive-nav-link megNavAction">
+										Paint Sprayers
+									</a>
+								</li>
+								<li class="nav-shelf__progressive-link-item  js-progressive-link-item">
+									<a href="#shelf_0_diy-series" class="nav-shelf__progressive-link js-progressive-nav-link megNavAction">
+										DIY Series
+									</a>
+								</li>
+								<li class="nav-shelf__progressive-link-item  js-progressive-link-item">
+									<a href="#shelf_0_project-series" class="nav-shelf__progressive-link js-progressive-nav-link megNavAction">
+										Project Series
+									</a>
+								</li>
+								<li class="nav-shelf__progressive-link-item  js-progressive-link-item">
+									<a href="#shelf_0_pro-series" class="nav-shelf__progressive-link js-progressive-nav-link megNavAction">
+										Pro Series
+									</a>
+								</li>
+								<li class="nav-shelf__progressive-link-item  js-progressive-link-item">
+									<a href="#shelf_0_paint-sprayer-accessories" class="nav-shelf__progressive-link js-progressive-nav-link megNavAction">
+										Paint Sprayer Accessories
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-shelf__section-panel nav-shelf__section-panel--reveal js-progressive-single-content-panel">
+							<div class="nav-shelf__content nav-shelf__progressive-single-content js-progressive-panel-content" id="shelf_0_paint-sprayers">
+								<span class="nav-shelf__title">
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products/paint-sprayers.njk">
+										Paint Sprayers
+									</a>
+								</span>
+								<div class="nav-shelf__description section">
+									<p>It's time to put down your paint brushes and rollers and pick up a Graco paint sprayer. You'll finish your DIY projects a lot quicker when you're using a house paint sprayer indoors and out. Up to 15 times faster, in fact!</p>
+								</div>
+								<h2 class="nav-shelf__title section">
+									<a class="megNavAction" href="/us/en/homeowner/products/paint-sprayers.njk" target="_self">
+										View All
+									</a>
+								</h2>
+								<div class="nav-shelf__featured section">
+									<span class="nav-shelf__featured-title nav-shelf__title"></span>
+									<div class="nav-shelf__featured-content">
+										<a href="/us/en/homeowner/products/paint-sprayers/diy-series.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/navfeature-diy.jpg)" aria-label="navfeature-diy">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">DIY Series</span>
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayers/project-series.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/navfeature-project.jpg)" aria-label="navfeature-project">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Project Series</span>
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayers/pro-series.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/navfeature-pro.jpg)" aria-label="navfeature-pro">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Pro Series</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="nav-shelf__content nav-shelf__progressive-single-content js-progressive-panel-content" id="shelf_0_diy-series">
+								<span class="nav-shelf__title">
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/diy-series.njk">
+										DIY Series
+									</a>
+								</span>
+								<div class="nav-shelf__description section">
+									<p>Perfect for DIY homeowners, fixer-uppers or beginners looking for a fast and easy alternative to brushes and rollers.</p>
+								</div>
+								<h2 class="nav-shelf__title section">
+									<a class="megNavAction" href="/us/en/homeowner/products/paint-sprayers/diy-series.njk" target="_self">
+										View All
+									</a>
+								</h2>
+								<div class="nav-shelf__featured section">
+									<span class="nav-shelf__featured-title nav-shelf__title"></span>
+									<div class="nav-shelf__featured-content">
+										<a href="/us/en/homeowner/product/257025-magnum-project-painter-plus.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_magnum_ppp.jpg)" aria-label="Project Painter Plus">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Magnum Project Painter Plus</span>
+										</a>
+										<a href="/us/en/homeowner/product/16y385-truecoat-360.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_truecoat_360.jpg)" aria-label="TrueCoat 360">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">TrueCoat 360</span>
+										</a>
+										<a href="/us/en/homeowner/product/16y386-truecoat-360-dsp.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_truecoat_360_dsp.jpg)" aria-label="TrueCoat 360 DSP">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">TrueCoat 360 DSP</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="nav-shelf__content nav-shelf__progressive-single-content js-progressive-panel-content" id="shelf_0_project-series">
+								<span class="nav-shelf__title">
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/project-series.njk">
+										Project Series
+									</a>
+								</span>
+								<div class="nav-shelf__description section">
+									<p>Just right for DIY homeowners and handymen tackling the small-to-midsize household projects.</p>
+								</div>
+								<h2 class="nav-shelf__title section">
+									<a class="megNavAction" href="/us/en/homeowner/products/paint-sprayers/project-series.njk" target="_self">
+										View All
+									</a>
+								</h2>
+								<div class="nav-shelf__featured section">
+									<span class="nav-shelf__featured-title nav-shelf__title"></span>
+									<div class="nav-shelf__featured-content">
+										<a href="/us/en/homeowner/product/262800-magnum-x5.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_magnum_x5.jpg)" aria-label="X5">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Magnum X5</span>
+										</a>
+										<a href="/us/en/homeowner/product/262805-magnum-x7.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_magnum_x7.jpg)" aria-label="X7">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Magnum X7</span>
+										</a>
+										<a href="/us/en/homeowner/product/17d889-truecoat-360-vsp.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_truecoat_360_vsp.jpg)" aria-label="TrueCoat 360 VSP">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">TrueCoat 360 VSP</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="nav-shelf__content nav-shelf__progressive-single-content js-progressive-panel-content" id="shelf_0_pro-series">
+								<span class="nav-shelf__title">
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/pro-series.njk">
+										Pro Series
+									</a>
+								</span>
+								<div class="nav-shelf__description section">
+									<p>The quality choice for property maintenance pros, remodelers and general contractors who spray more often.</p>
+								</div>
+								<h2 class="nav-shelf__title section">
+									<a class="megNavAction" href="/us/en/homeowner/products/paint-sprayers/pro-series.njk" target="_self">
+										View All
+									</a>
+								</h2>
+								<div class="nav-shelf__featured section">
+									<span class="nav-shelf__featured-title nav-shelf__title"></span>
+									<div class="nav-shelf__featured-content">
+										<a href="/us/en/homeowner/product/17n163-tc-pro-corded.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_tc_pro_cord.jpg)" aria-label="TC Pro, Corded">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">TC Pro, Corded</span>
+										</a>
+										<a href="/us/en/homeowner/product/17g178-magnum-prox17.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_prox_17_stand.jpg)" aria-label="ProX17, Stand">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Magnum ProX17, Stand</span>
+										</a>
+										<a href="/us/en/homeowner/product/17g180-magnum-prox19.njk" target="_self" class="nav-shelf__featured-content-item">
+											<div class="nav-shelf__featured-content-image" style="background-image: url(/content/dam/graco/homeowner/images/nav_prox_19_cart.jpg)" aria-label="ProX19, Cart">
+												<div class="responsive-image-spacer"></div>
+											</div>
+											<span class="nav-shelf__title text-align--center">Magnum ProX19, Cart</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="nav-shelf__content nav-shelf__progressive-single-content js-progressive-panel-content" id="shelf_0_paint-sprayer-accessories">
+								<span class="nav-shelf__title">
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/products/paint-sprayer-accessories.njk">
+										Paint Sprayer Accessories
+									</a>
+								</span>
+								<div class="nav-shelf__description section">
+									<p>Ensure your paint sprayer always operates at maximum performance—choose genuine Graco parts.</p>
+								</div>
+								<div class="nav-shelf__split-content section">
+									<div class="nav-shelf__split-content-col">
+										<a href="/us/en/homeowner/products/paint-sprayer-accessories/spray-tips-tip-guards.njk" target="_self" class="nav-shelf__link">
+											Spray Tips &amp; Tip Guards
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayer-accessories/guns.njk" target="_self" class="nav-shelf__link">
+											Spray Guns
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayer-accessories/roller-systems-covers.njk" target="_self" class="nav-shelf__link">
+											Roller Systems &amp; Covers
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayer-accessories/filters-strainers.njk" target="_self" class="nav-shelf__link">
+											Filters &amp; Stainers
+										</a>
+										<a href="/us/en/homeowner/products/paint-sprayer-accessories.njk" target="_self" class="nav-shelf__title underline">
+											View All
+										</a>
+									</div>
+									<div class="nav-shelf__split-content-col"></div>
+								</div>
+							</div>
+						</div>
+						<div class="nav-shelf__section-panel nav_shelf__menu-feature-container nav-shelf__section-panel--reveal js-feature-panel">
+							<div id="shelf_0_paint-sprayers_menufeature" class="menu-feature-container__wrapper menu-feature-container__wrapper--reveal js-menu-feature">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--feature" style="background-image:url(/content/dam/graco/homeowner/images/nav-feature-spray-ext.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg);">
+										<div class="nav-shelf__feature-content">
+											<h2 class="h4 color-white  js-feature-panel-title"></h2>
+											<a class="btn ">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="shelf_0_diy-series_menufeature" class="menu-feature-container__wrapper menu-feature-container__wrapper--reveal js-menu-feature">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--feature" style="background-image:url(/content/dam/graco/homeowner/images/seriesnavdiy300x400.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg);">
+										<div class="nav-shelf__feature-content">
+											<h2 class="h4 color-white  js-feature-panel-title"></h2>
+											<a class="btn ">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="shelf_0_project-series_menufeature" class="menu-feature-container__wrapper menu-feature-container__wrapper--reveal js-menu-feature">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--feature" style="background-image:url(/content/dam/graco/homeowner/images/seriesnavproject300x400.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg);">
+										<div class="nav-shelf__feature-content">
+											<h2 class="h4 color-white  js-feature-panel-title"></h2>
+											<a class="btn ">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="shelf_0_pro-series_menufeature" class="menu-feature-container__wrapper menu-feature-container__wrapper--reveal js-menu-feature">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--feature" style="background-image:url(/content/dam/graco/homeowner/images/seriesnavpro300x400.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg);">
+										<div class="nav-shelf__feature-content">
+											<h2 class="h4 color-white  js-feature-panel-title"></h2>
+											<a class="btn ">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="shelf_0_paint-sprayer-accessories_menufeature" class="menu-feature-container__wrapper menu-feature-container__wrapper--reveal js-menu-feature">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--feature" style="background-image:url(/content/dam/graco/homeowner/images/nav-feature-roller1.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg);">
+										<div class="nav-shelf__feature-content">
+											<h2 class="h4 color-white  js-feature-panel-title"></h2>
+											<a class="btn ">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nav-shelf__section nav-shelf__section--static nav-shelf__section--static-multipanel js-nav-shelf-section" id="shelf_1">
+						<div class="nav-shelf__section-panel">
+							<span class="nav-shelf__title">
+								<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects.njk">
+									Solutions for Home Projects
+								</a>
+							</span>
+							<ul class="nav-shelf__items">
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-a-deck-using-a-paint-sprayer.njk">Decks</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-a-fence-using-an-airless-sprayer.njk">Fences</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-popcorn-ceiling-using-an-airless-sprayer.njk">Ceilings</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-room-quickly-and-easily-using-a-paint-sprayer.njk">Interior Walls</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-the-exterior-of-a-house-using-an-airless-sprayer.njk">Exterior Walls</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-doors-and-trim-using-an-airless-sprayer.njk">Doors &amp; Trim</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-railings-using-an-airless-sprayer.njk">Railings</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-shutters-using-an-airless-sprayer.njk">Shutters</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-outdoor-furniture-using-an-airless-sprayer.njk">Outdoor Furniture</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-shed-using-a-paint-sprayer.njk">Sheds</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-garage-door-using-a-paint-sprayer.njk">Garage Doors</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-cabinets-with-an-airless-paint-sprayer.njk">Cabinets</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-shelf__section-panel">
+							<div class="nav-shelf__content"></div>
+						</div>
+						<div class="nav-shelf__section-panel nav_shelf__menu-feature-container js-feature-panel">
+							<div class="menu-feature-container__wrapper"></div>
+						</div>
+					</div>
+					<div class="nav-shelf__section nav-shelf__section--static nav-shelf__section--static-multipanel js-nav-shelf-section" id="shelf_2">
+						<div class="nav-shelf__section-panel">
+							<span class="nav-shelf__title">
+								<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy.njk">
+									How To Buy
+								</a>
+							</span>
+							<ul class="nav-shelf__items">
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer.njk">Find a Retailer</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/buy-online.njk">Buy Online</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/brochures.njk">Brochures</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/tipselector.njk">Spray Tip Selector</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-shelf__section-panel">
+							<div class="nav-shelf__content"></div>
+						</div>
+						<div class="nav-shelf__section-panel nav_shelf__menu-feature-container js-feature-panel">
+							<div class="menu-feature-container__wrapper"></div>
+						</div>
+					</div>
+					<div class="nav-shelf__section nav-shelf__section--static js-nav-shelf-section" id="shelf_3">
+						<div class="nav-shelf__section-panel">
+							<span class="nav-shelf__title">
+								<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support.njk">
+									Support
+								</a>
+							</span>
+							<ul class="nav-shelf__items">
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/education-center.njk">Education Center</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/faq.njk">Frequently Asked Questions</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/product-registration.njk">Product Registration</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/parts-search.njk">Find Manuals &amp; Parts</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/warranty-claims.njk">Warranty</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer.njk?services=service">Find A Local Service Center</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/certifications-agency-approvals.njk">Certifications &amp; Agency Approvals</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/safety-data-sheets.njk">Safety Data Sheets</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/component-parts-not-manufactured-by-graco.njk">Parts Not Manufactured by Graco</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/contact-us.njk">Contact Technical Support</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/contact-us.njk">Contact Us</a>
+								</li>
+								<li>
+									<a class="megNavAction" href="https://www.graco.com/us/en/homeowner/support/write-a-review.njk">Write a Review</a>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-shelf__section-panel nav_shelf__menu-feature-container js-feature-panel">
+							<div class="menu-feature-container__wrapper">
+								<div class="menu-feature-container__wrapper">
+									<div class="menu-feature-container__menu--cta ">
+										<img src="/img/mail_white.svg" class="nav-shelf__section-panel--cta-icon g-icon-x-large" alt="">
+										<h2 class="h4 color-white">Need Help?</h2>
+										<p class="p color-white"></p>
+										<div class="nav-shelf__section-panel--cta-wrapper">
+											<a href="/us/en/homeowner/support/contact-us.njk" target="_blank" class="btn btn--underline-white">
+												Contact Us
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<nav class="site-navigation--mobile nav js-mobile-menu">
+	<div class="site-navigation__mobile-main">
+		<ul class="site-navigation__mobile-menu-panel site-navigation__mobile-menu-panel--top-level js-site-navigation-mobile-menu">
+			<li>
+				<a href="#" class="site-navigation__mobile-menu-link megNavAction has-submenu js-mobile-open-submenu">
+					Products
+				</a>
+				<ul class="site-navigation__mobile-menu-panel js-site-navigation-mobile-menu">
+					<div class="site-navigation__mobile-section-header">
+						<button class="site-navigation__mobile-section-header-back js-mobile-nav-back-btn js-mobile">
+							Back
+							<img src="/img/chevron_left_blue.svg" alt="">
+						</button>
+						<h2 class="site-navigation__mobile-section-header-title h8 color-blue  js-mobile-nav-back-btn">
+							Back </h2>
+					</div>
+					<li>
+						<a class="site-navigation__mobile-menu-link bold megNavAction" href="https://www.graco.com/us/en/homeowner/products.njk">
+							Products
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction " href="https://www.graco.com/us/en/homeowner/products/paint-sprayers.njk">
+							Paint Sprayers
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction " href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/diy-series.njk">
+							DIY Series
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction " href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/project-series.njk">
+							Project Series
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction " href="https://www.graco.com/us/en/homeowner/products/paint-sprayers/pro-series.njk">
+							Pro Series
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction " href="https://www.graco.com/us/en/homeowner/products/paint-sprayer-accessories.njk">
+							Paint Sprayer Accessories
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="site-navigation__mobile-menu-link megNavAction has-submenu js-mobile-open-submenu">
+					Projects
+				</a>
+				<ul class="site-navigation__mobile-menu-panel js-site-navigation-mobile-menu">
+					<div class="site-navigation__mobile-section-header">
+						<button class="site-navigation__mobile-section-header-back js-mobile-nav-back-btn js-mobile">
+							Back
+							<img src="/img/chevron_left_blue.svg" alt="">
+						</button>
+						<h2 class="site-navigation__mobile-section-header-title h8 color-blue  js-mobile-nav-back-btn">
+							Back </h2>
+					</div>
+					<li>
+						<a class="site-navigation__mobile-menu-link bold megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects.njk">
+							Projects
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-a-deck-using-a-paint-sprayer.njk">Decks</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-a-fence-using-an-airless-sprayer.njk">Fences</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-popcorn-ceiling-using-an-airless-sprayer.njk">Ceilings</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-room-quickly-and-easily-using-a-paint-sprayer.njk">Interior Walls</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-the-exterior-of-a-house-using-an-airless-sprayer.njk">Exterior Walls</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-doors-and-trim-using-an-airless-sprayer.njk">Doors &amp; Trim</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-or-stain-railings-using-an-airless-sprayer.njk">Railings</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-shutters-using-an-airless-sprayer.njk">Shutters</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-outdoor-furniture-using-an-airless-sprayer.njk">Outdoor Furniture</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-shed-using-a-paint-sprayer.njk">Sheds</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-a-garage-door-using-a-paint-sprayer.njk">Garage Doors</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/home-projects/articles/how-to-paint-cabinets-with-an-airless-paint-sprayer.njk">Cabinets</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="site-navigation__mobile-menu-link megNavAction has-submenu js-mobile-open-submenu">
+					How To Buy
+				</a>
+				<ul class="site-navigation__mobile-menu-panel js-site-navigation-mobile-menu">
+					<div class="site-navigation__mobile-section-header">
+						<button class="site-navigation__mobile-section-header-back js-mobile-nav-back-btn js-mobile">
+							Back
+							<img src="/img/chevron_left_blue.svg" alt="">
+						</button>
+						<h2 class="site-navigation__mobile-section-header-title h8 color-blue  js-mobile-nav-back-btn">
+							Back </h2>
+					</div>
+					<li>
+						<a class="site-navigation__mobile-menu-link bold megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy.njk">
+							How To Buy
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer.njk">Find a Retailer</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/buy-online.njk">Buy Online</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/brochures.njk">Brochures</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/tipselector.njk">Spray Tip Selector</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="site-navigation__mobile-menu-link megNavAction has-submenu js-mobile-open-submenu">
+					Owner Support
+				</a>
+				<ul class="site-navigation__mobile-menu-panel js-site-navigation-mobile-menu">
+					<div class="site-navigation__mobile-section-header">
+						<button class="site-navigation__mobile-section-header-back js-mobile-nav-back-btn js-mobile">
+							Back
+							<img src="/img/chevron_left_blue.svg" alt="">
+						</button>
+						<h2 class="site-navigation__mobile-section-header-title h8 color-blue  js-mobile-nav-back-btn">
+							Back </h2>
+					</div>
+					<li>
+						<a class="site-navigation__mobile-menu-link bold megNavAction " href="https://www.graco.com/us/en/homeowner/support.njk">
+							Owner Support
+						</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/education-center.njk">Education Center</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/faq.njk">Frequently Asked Questions</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/product-registration.njk">Product Registration</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/parts-search.njk">Find Manuals &amp; Parts</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/warranty-claims.njk">Warranty</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer.njk?services=service">Find A Local Service Center</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/certifications-agency-approvals.njk">Certifications &amp; Agency Approvals</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/safety-data-sheets.njk">Safety Data Sheets</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/component-parts-not-manufactured-by-graco.njk">Parts Not Manufactured by Graco</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/contact-us.njk">Contact Technical Support</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/contact-us.njk">Contact Us</a>
+					</li>
+					<li>
+						<a class="site-navigation__mobile-menu-link megNavAction" href="https://www.graco.com/us/en/homeowner/support/write-a-review.njk">Write a Review</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link color-light-gray border-bottom-0" href="/us/en/homeowner/how-to-buy/find-a-retailer.njk">
+					<img class="g-icon" src="/img/map_pin_gray.svg" alt="">Find A Retailer</a>
+			</li>
+			<li class="site-navigation__first-footer-link">
+				<a class="site-navigation__mobile-menu-link bg-black" href="/globalselector.njk">
+					<img src="/img/globe_gray.svg" alt="" class="g-icon">North America/English</a>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link  bg-black" href="/us/en.njk" target="_self">
+					<span class="nav-link-text">Graco Home</span>
+				</a>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link  bg-black" href="/us/en/contractor.njk" target="_self">
+					<span class="nav-link-text">Contractor</span>
+				</a>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link  bg-black" href="/us/en/vehicle-service.njk" target="_self">
+					<span class="nav-link-text">Vehicle &amp; Heavy Equip</span>
+				</a>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link  bg-black" href="/us/en/in-plant-manufacturing.njk" target="_self">
+					<span class="nav-link-text">Industrial, Manufacturing &amp; Processing</span>
+				</a>
+			</li>
+			<li>
+				<a class="site-navigation__mobile-menu-link  bg-black" href="/us/en/login.njk" target="_self">
+					<span class="nav-link-text">For Distributors</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<div class="site-navigation--mobile__blocker js-close-mobile-menu"></div>
+<!-- UPDATE PLACE HOLDER FOR ORIGINAL CONTENT -->
+<section class="contextual-subnavigation bg-light" data-template="genericsegment" data-maxlinkcount="4" data-linkcount-after-ellipsis="3" data-segment-page="Homeowner">
+	<div class="container-fluid">
+		<nav class="nav">
+			<div class="contextual-subnavigation__controls">
+				<div class="contextual-subnavigation__breadcrumbs js-breadcrumb">
+					<a class="contextual-subnavigation__breadcrumb " href="https://www.graco.com/us/en/homeowner.njk">Homeowner FPO</a>
+					<a class="contextual-subnavigation__breadcrumb " href="https://www.graco.com/us/en/homeowner/how-to-buy.njk">How To Buy FPO</a>
+					<a class="contextual-subnavigation__breadcrumb disabled" href="https://www.graco.com/us/en/homeowner/how-to-buy/find-a-retailer.njk">Find a Retailer FPO</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</section>
+
+<!--UPDATE UI CONTENT HERE -->
+	<section class="product-details">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm">
+					<div class="product-details-mobile">
+						<h2 class="product-details__category color-blue h7">UniDrum</h2>
+						<h1 class="product-details__title h5">UniDrum, E-Flo SP, 19:1 Ratio, 430cc, 300 Gallon, Carbon Steel, Severe Duty, 400v, Left Handed Supply</h1>
+						<h3 class="h5 small normal color-black partNumber" data-partnumber="26D369">
+							<strong>Part Number:</strong> 26D369</h3>
+					</div>
+					<div class="product-details__images js-product-detail-images">
+						<div class="product-details__images-wrapper">
+							<div class="product-details__images-main">
+								<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Main.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg" class="js-product-details-main-image is-active" data-index="0" data-type="image">
+								<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Alt1.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg" class="js-product-details-main-image " data-index="1" data-type="image">
+							</div>
+							<div class="product-details__image-captions">
+								<div class="product-details__caption is-active js-product-details-main-image" data-index="0">Image is for illustrative purposes only.</div>
+								<div class="product-details__caption  js-product-details-main-image" data-index="1">Image is for illustrative purposes only.</div>
+							</div>
+							<div class="product-details__images-controls">
+								<button class="mt-2 is-active js-product-details-image-control" data-index="0" data-type="image">
+									<span class="sr-only"></span>
+									<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Main.jpg/_jcr_content/renditions/cq5dam.web.200.200.jpeg" data-index="0">
+									<div class="responsive-image-spacer"></div>
+								</button>
+								<button class="mt-2  js-product-details-image-control" data-index="1" data-type="image">
+									<span class="sr-only"></span>
+									<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Alt1.jpg/_jcr_content/renditions/cq5dam.web.200.200.jpeg" data-index="1">
+									<div class="responsive-image-spacer"></div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-details__content col-sm pt-sm-4">
+					<div class="product-details_header">
+						<h2 class="product-details__category color-blue h7">UniDrum</h2>
+						<h1 class="product-details__title h5">UniDrum, E-Flo SP, 19:1 Ratio, 430cc, 300 Gallon, Carbon Steel, Severe Duty, 400v, Left Handed Supply</h1>
+						<h3 class="h5 small normal color-black partNumber" data-partnumber="26D369">
+							<strong>Part Number:</strong> 26D369</h3>
+					</div>
+					<div class="product-details__description">
+						Electric bulk unloader efficiently evacuates 300 gallon (1200 liter) magna drums or tote drums, supplying one-component, medium to high viscosity sealants and adhesives to industrial and automotive applications.
+					</div>
+					<!-- UPDATE REP CARD -->
+					
+					
+	<section class="bg-light flex-wrap py-3 align-items-center">
+		<header class="d-flex flex-wrap justify-content-between">
+			<div class="col-12 col-lg-auto pb-2">
+				<span class="h7 w-100 m-0">Local Sales Expert</span>
+			</div>
+			<div class="col-12 col-lg-auto pb-2 text-lg-right">
+			<span class="h7 font-weight-normal m-0 p-0 m-0 color-light-gray m-0">
+				ZIP: 55603
+				<a href="#" class="color-light-gray underline d-inline-block ">Change Location</a>
+			</span>
+			</div>
+		</header>
+		<div class="col-12">
+			<div class="d-flex flex-wrap align-items-center">
+				<div class="col-12 col-md-2 mb-2 mb-lg-0 pl-0 ">
+					
+						<img width="55" height="55" class="img-fluid rounded-circle" src="https://i.pravatar.cc/110?img=59" alt="Jim Hale">
+					
+				</div>
+				<div class="col-12 col-md-8 pl-0">
+					
+						<p class="m-0 p-0"><strong>Jim Hale,</strong> Sales Channel Mgr.</p>
+						<p class="m-0 p-0 color-light-gray">Area Served: Minnesota</p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="col-12 pt-2">
+			<div class="d-flex flex-wrap align-items-top">
+				<div class="col-12 offset-lg-2 col-md-6 col-lg-4 col-xl-auto pl-0 pr-md-0 pr-md-3 mb-2 mb-sm-0">
+					<p class="m-0 p-0"><strong>800-507-3672</strong></p>
+					<span class="small color-light-gray">8:00am-4:00pm CT</span>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 col-xl-auto pl-0 pl-md-3">
+					<a class="btn btn--underline-blue py-0 px-0" href="#">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<div class="product-details__cta-container d-flex justify-content-start align-items-center flex-wrap py-2">
+	<div class="col-12 col-lg-6 px-0 pr-lg-2">
+		<a href="/us/en/in-plant-manufacturing/how-to-buy/where-to-buy.html?wtb_code=UNI" name="where-to-buy" class="w-100 btn btn--small btn--bg-blue" target="_self">Where to Buy</a>
+	</div>
+	<div class="col-12 col-lg-6 px-0 pl-lg-2">
+		<a href="/us/en/in-plant-manufacturing/forms/contact-us-sae.html" name="contact-us-sae" class="w-100 btn btn--small btn--outline-blue" target="_self">Ask an Expert</a>
+	</div>
+</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- UPDATE UI CONTENT END HERE -->
+</div>
+<!-- Global JS Starts -->
+<script src="https://www.graco.com/etc/designs/graco-redesign/clientlibs/main/js/main.min.js"></script>
+<script async src="https://apps.bazaarvoice.com/deployments/gracoconv/redesign_site/production/en_US/bv.js"></script>
+<script type="application/json" data-component="global" data-component-instance="0">
+	{}
+</script>
+<!--UPDATE NEW SCRIPTS HERE -->
+<!-- UPDATE FOR TOOL TIP -->
+<script src="/js/app.js"></script>
+<script src="https://www.graco.com/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.js"></script>
+<script src="https://www.graco.com/etc/designs/graco-redesign/clientlibs/components.min.js"></script>
+</body>
+</html>

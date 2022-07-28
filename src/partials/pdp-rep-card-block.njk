@@ -1,0 +1,55 @@
+{% if noLocation !== true %}
+	<section class="bg-light flex-wrap py-3 align-items-center">
+		<header class="d-flex flex-wrap justify-content-between">
+			<div class="col-12 col-lg-auto pb-2">
+				<span class="h7 w-100 m-0">Local Sales Expert</span>
+			</div>
+			<div class="col-12 col-lg-auto pb-2 text-lg-right">
+			<span class="h7 font-weight-normal m-0 p-0 m-0 color-light-gray m-0">
+				ZIP: 55603
+				<a href="#" class="color-light-gray underline d-inline-block ">Change Location</a>
+			</span>
+			</div>
+		</header>
+		<div class="col-12">
+			<div class="d-flex flex-wrap align-items-center">
+				<div class="col-12 col-md-2 mb-2 mb-lg-0 pl-0 ">
+					{% if salesTeam == true %}
+						<img width="55" height="55" class="img-fluid rounded-circle" src="./img/graco-circle.jpeg" alt="Jim Hale">
+					{% else %}
+						<img width="55" height="55" class="img-fluid rounded-circle" src="https://i.pravatar.cc/110?img=59" alt="Jim Hale">
+					{% endif %}
+				</div>
+				<div class="col-12 col-md-8 pl-0">
+					{% if salesTeam == true %}
+						<p class="m-0 p-0"><strong>Graco Inside Sales Team</strong> Sales Channel Mgr.</p>
+						<p class="m-0 p-0 color-light-gray">Area Served: United States</p>
+					{% else %}
+						<p class="m-0 p-0"><strong>Jim Hale,</strong> Sales Channel Mgr.</p>
+						<p class="m-0 p-0 color-light-gray">Area Served: Minnesota</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="col-12 pt-2">
+			<div class="d-flex flex-wrap align-items-top">
+				<div class="col-12 offset-lg-2 col-md-6 col-lg-4 col-xl-auto pl-0 pr-md-0 pr-md-3 mb-2 mb-sm-0">
+					<p class="m-0 p-0"><strong>800-507-3672</strong></p>
+					<span class="small color-light-gray">8:00am-4:00pm CT</span>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 col-xl-auto pl-0 pl-md-3">
+					<a class="btn btn--underline-blue py-0 px-0" href="#">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+<div class="product-details__cta-container d-flex justify-content-start align-items-center flex-wrap py-2">
+	<div class="col-12 col-lg-6 px-0 pr-lg-2">
+		<a href="/us/en/in-plant-manufacturing/how-to-buy/where-to-buy.html?wtb_code=UNI" name="where-to-buy" class="w-100 btn btn--small btn--bg-blue" target="_self">Where to Buy</a>
+	</div>
+	<div class="col-12 col-lg-6 px-0 pl-lg-2">
+		<a href="/us/en/in-plant-manufacturing/forms/contact-us-sae.html" name="contact-us-sae" class="w-100 btn btn--small btn--outline-blue" target="_self">Ask an Expert</a>
+	</div>
+</div>
+

@@ -1,0 +1,63 @@
+{% extends 'layouts/layout.njk' %}
+
+{% block header %}
+	{% include "partials/header-basic.njk" %}
+{% endblock %}
+
+{% block content %}
+	<section class="product-details">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm">
+					<div class="product-details-mobile">
+						<h2 class="product-details__category color-blue h7">UniDrum</h2>
+						<h1 class="product-details__title h5">UniDrum, E-Flo SP, 19:1 Ratio, 430cc, 300 Gallon, Carbon Steel, Severe Duty, 400v, Left Handed Supply</h1>
+						<h3 class="h5 small normal color-black partNumber" data-partnumber="26D369">
+							<strong>Part Number:</strong> 26D369</h3>
+					</div>
+					<div class="product-details__images js-product-detail-images">
+						<div class="product-details__images-wrapper">
+							<div class="product-details__images-main">
+								<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Main.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg" class="js-product-details-main-image is-active" data-index="0" data-type="image">
+								<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Alt1.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg" class="js-product-details-main-image " data-index="1" data-type="image">
+							</div>
+							<div class="product-details__image-captions">
+								<div class="product-details__caption is-active js-product-details-main-image" data-index="0">Image is for illustrative purposes only.</div>
+								<div class="product-details__caption  js-product-details-main-image" data-index="1">Image is for illustrative purposes only.</div>
+							</div>
+							<div class="product-details__images-controls">
+								<button class="mt-2 is-active js-product-details-image-control" data-index="0" data-type="image">
+									<span class="sr-only"></span>
+									<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Main.jpg/_jcr_content/renditions/cq5dam.web.200.200.jpeg" data-index="0">
+									<div class="responsive-image-spacer"></div>
+								</button>
+								<button class="mt-2  js-product-details-image-control" data-index="1" data-type="image">
+									<span class="sr-only"></span>
+									<img src="https://www.graco.com/content/dam/pim/graco/aftd/afd/UniDrum_2400x2400_Alt1.jpg/_jcr_content/renditions/cq5dam.web.200.200.jpeg" data-index="1">
+									<div class="responsive-image-spacer"></div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-details__content col-sm pt-sm-4">
+					<div class="product-details_header">
+						<h2 class="product-details__category color-blue h7">UniDrum</h2>
+						<h1 class="product-details__title h5">UniDrum, E-Flo SP, 19:1 Ratio, 430cc, 300 Gallon, Carbon Steel, Severe Duty, 400v, Left Handed Supply</h1>
+						<h3 class="h5 small normal color-black partNumber" data-partnumber="26D369">
+							<strong>Part Number:</strong> 26D369</h3>
+					</div>
+					<div class="product-details__description">
+						Electric bulk unloader efficiently evacuates 300 gallon (1200 liter) magna drums or tote drums, supplying one-component, medium to high viscosity sealants and adhesives to industrial and automotive applications.
+					</div>
+					<!-- UPDATE REP CARD -->
+					{% set salesTeam = true %}
+					{% include "partials/pdp-rep-card-block.njk" %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

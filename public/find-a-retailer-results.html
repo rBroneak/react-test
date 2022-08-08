@@ -11,9 +11,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Overpass%3A700%2C900%7CRoboto%3A400%2C400i%2C700%2C700i" rel="stylesheet"/>
 	<link media="all" rel="stylesheet" href="https://www.graco.com/etc/designs/graco-redesign/clientlibs/main/css/main.min.css"/>
+	<!-- UPDATE NEW CSS
+		marked in the code by /* UPDATED CSS HERE */
+	-->
 	<link media="all" rel="stylesheet" href="/css/app.css"/>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- UPDATE brought in bootstrap popover -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script async src="https://apps.bazaarvoice.com/deployments/gracoconv/redesign_site/production/en_US/bv.js"></script>
 </head>
 <body class="scroll-area" data-spy="scroll" data-offset="0"><div class="body-content">
@@ -848,7 +853,7 @@
 									
 									<!-- UPDATE -->
 <div class="d-flex flex-wrap flex-row justify-content-between hidden">
-	<div class="col-12 col-lg-9">
+	<div class="col-12 col-lg-8 col-xl-9 px-0 px-sm-3">
 		<label for="address" class="h7 text-align--left ">Location
 			<span class="color-bright-red">*</span>
 		</label>
@@ -858,7 +863,7 @@
 		-->
 		<button type="submit" class="mt-0 address-search dl-filters" title="Enter Your address">
 			<span>SEARCH</span>
-			<i class="bi bi-search p-1"></i>
+			<img src="/img/search_gray.svg" class="g-icon" alt="Search">
 		</button>
 		<div class="g-input-icon-submit">
 			<input class="location-search wide" type="text" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
@@ -867,7 +872,7 @@
 			 style="display:none;">Address Not Found. Please enter City, State.
 		</div>
 	</div>
-	<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
+	<div class="col-12 col-lg-4 col-xl-3 pt-4 pt-lg-0 px-0 px-sm-3 dl-filters">
 		<div class="d-flex flex-wrap flex-row justify-content-end">
 			<div class="col-12 p-0">
 				<label for="search-radius" class="h7 text-align--left ">Search Within
@@ -875,7 +880,7 @@
 				</label>
 			</div>
 			<div class="col-4 p-0">
-				<div class="dl-select bg-transparent ">
+				<div class="dl-select bg-transparent border-right-0">
 					<select name="search-radius" class="color-black" id="search-radius">
 						<option value="10" selected="">10</option>
 						<option value="25">25</option>
@@ -903,8 +908,8 @@
 									<!-- UPDATE -->
 <div class="pt-4 dl-filters js-search-products-by ">
 	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
-		<div class="col-12 col-lg-12">
-			<div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+		<div class="col-12 col-lg-12 px-0 px-sm-3">
+			<div class="d-flex flex-wrap flex-md-nowrap align-items-top">
 				<div class="col-auto h7 text-align--left mb-0 pl-0 py-2">Search Products By:
 					<span class="color-bright-red">*</span>
 				</div>
@@ -933,7 +938,7 @@
 
 									
 									<!-- UPDATE -->
-<div class="pb-4 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories ">
+<div class="pb-4 px-0 px-sm-3 progressive-form-section search-by-number tabbed-filters__tab-content dl-categories ">
 	<div class="d-flex flex-wrap flex-row justify-content-center">
 		<div class="col-12 col-lg-12 mt-2 mb-3 px-0">
 			<label for="searchby-part-number" class="h7 color-gray text-align--left">
@@ -962,7 +967,7 @@
 									<!-- UPDATE -->
 <div class="pb-4 progressive-form-section search-by-family tabbed-filters__tab-content dl-categories px-0 is-active">
 	<div class="d-flex flex-wrap flex-md-nowrap flex-row justify-content-center">
-		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 ">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 px-0 px-sm-3">
 			<label for="product-category" class="h7 color-gray text-align--left">
 				Material or Application
 				<span class="color-bright-red">*</span>
@@ -984,13 +989,13 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 " style="display:none">
-			<label for="product-family" class="h7 color-gray text-align--left">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 mb-3 px-0 px-sm-3" style="display:none">
+			<label for="product-model" class="h7 color-gray text-align--left">
 				Product Family
 				<span class="color-bright-red">*</span>
 			</label>
 			<div class="g-select ">
-				<select name="product-family-DL" id="product-family" class="color-light-gray"
+				<select name="product-family-DL" id="product-model" class="color-light-gray"
 						disabled="">
 					<option value="">
 						Select a Family
@@ -1066,7 +1071,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-12 col-sm-6 col-lg-6 mt-2">
+		<div class="col-12 col-sm-6 col-lg-6 mt-2 px-0 px-sm-3">
 			<label for="product-model" class="h7 color-gray text-align--left ">Product Model
 			</label>
 			
@@ -1211,8 +1216,9 @@
 							</div>
 							<div class="col-12 col-md-3 py-2">
 								<div class="dl-select bg-transparent w-100">
-									<select name="search-radius-unit" class="js-tabbed-content-select color-black pr-1"
-											id="search-radius-unit">
+									<label for="country-select" class="hidden">Select Country</label>
+									<select aria-label="Country Select" name="country-select" class="js-tabbed-content-select color-black pr-1"
+											id="country-select">
 										<option value="unitedstates">United States</option>
 										<option value="canada">Canada</option>
 									</select>
@@ -1482,7 +1488,7 @@
 				</div>
 				<div class="col-4 p-0">
 					<div class="dl-select bg-transparent ">
-						<select name="search-radius" class="color-black" id="search-radius">
+						<select aria-label="Search Radius" name="search-radius" class="color-black" id="search-radius">
 							<option value="10" selected="">10</option>
 							<option value="25">25</option>
 							<option value="50">50</option>
@@ -1492,7 +1498,7 @@
 				</div>
 				<div class="col-8 p-0">
 					<div class="dl-select bg-transparent">
-						<select name="search-radius-unit" class="color-black"
+						<select aria-label="Search Units" name="search-radius-unit" class="color-black"
 								id="search-radius-unit">
 							<option value="mi">Miles</option>
 							<option value="km">Kilometers</option>
@@ -1504,11 +1510,11 @@
 		<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
 			<div class="d-flex flex-wrap flex-row justify-content-start">
 				<div class="col-12 p-0">
-					<label for="search-radius" class="h7 text-align--left">Services</label>
+					<label for="services" class="h7 text-align--left">Services</label>
 				</div>
 				<div class="col-12 p-0">
 					<div class="dl-select bg-transparent">
-						<select name="search-radius" class="color-black" id="services">
+						<select aria-label="Services" name="services" class="color-black" id="services">
 							<option value="Service Center" selected="">Service Center</option>
 							<option value="Service Type 1">Service Type 1</option>
 							<option value="Service Type 2">Service Type 2</option>
@@ -1520,14 +1526,11 @@
 	</div>
 </div>
 <section class="d-flex flex-wrap flex-row justify-content-between">
-	<div class="col-6 pl-0">
+	<div class="col-12 col-sm-6 pl-0">
 		<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
 			for pricing and availability. Some product subject to special order status.</p>
 	</div>
-	<div class="col-auto pr-0">
-		
-		<p>2 results results withing 10 miles of 55401</p>
-	</div>
+	<div class="col-auto px-0 pl-sm-2 mt-sm-2">2 results withing 10 miles of 55402</div>
 </section>
 
 					<section id="results" class="d-flex flex-wrap flex-row justify-content-center pt-2">
@@ -1875,8 +1878,7 @@
 <script type="application/json" data-component="global" data-component-instance="0">
 	{}
 </script>
-<!--UPDATE NEW SCRIPTS HERE -->
-<!-- UPDATE FOR TOOL TIP -->
+<!-- UPDATE - New Js Is here -->
 <script src="/js/app.js"></script>
 <script src="https://www.graco.com/etc.clientlibs/clientlibs/granite/jquery/granite/csrf.min.js"></script>
 <script src="https://www.graco.com/etc/designs/graco-redesign/clientlibs/components.min.js"></script>

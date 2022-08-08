@@ -1,6 +1,6 @@
 <!-- UPDATE -->
 <div class="d-flex flex-wrap flex-row justify-content-between {% if showLocation !== true %}hidden{% endif %}">
-	<div class="col-12 col-lg-9">
+	<div class="col-12 col-lg-8 col-xl-9 px-0 px-sm-3">
 		<label for="address" class="h7 text-align--left ">Location
 			<span class="color-bright-red">*</span>
 		</label>
@@ -10,7 +10,7 @@
 		-->
 		<button type="submit" class="mt-0 address-search dl-filters" title="Enter Your address">
 			<span>SEARCH</span>
-			<i class="bi bi-search p-1"></i>
+			<img src="/img/search_gray.svg" class="g-icon" alt="Search">
 		</button>
 		<div class="g-input-icon-submit">
 			<input class="location-search wide" type="text" id="address" name="address" placeholder="Enter City, State or Zip code" required="">
@@ -19,7 +19,7 @@
 			 style="display:none;">Address Not Found. Please enter City, State.
 		</div>
 	</div>
-	<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
+	<div class="col-12 col-lg-4 col-xl-3 pt-4 pt-lg-0 px-0 px-sm-3 dl-filters">
 		<div class="d-flex flex-wrap flex-row justify-content-end">
 			<div class="col-12 p-0">
 				<label for="search-radius" class="h7 text-align--left ">Search Within
@@ -27,7 +27,7 @@
 				</label>
 			</div>
 			<div class="col-4 p-0">
-				<div class="dl-select bg-transparent ">
+				<div class="dl-select bg-transparent border-right-0">
 					<select name="search-radius" class="color-black" id="search-radius">
 						<option value="10" selected="">10</option>
 						<option value="25">25</option>

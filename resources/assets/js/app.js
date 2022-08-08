@@ -15,19 +15,20 @@
     element.classList.toggle("hidden");
   }
 
-  const seeAllResutls = document.getElementById("jsSeeAllResults");
+  const seeAllResults = document.getElementById("jsSeeAllResults");
   const productSearch = document.getElementById("jsToggleProductSearch");
 
-  if (seeAllResutls) {
-    seeAllResutls.addEventListener("click", showListings);
+  if (seeAllResults) {
+    seeAllResults.addEventListener("click", showListings);
   }
   if (productSearch) {
     productSearch.addEventListener("click", toggleProductSearch);
   }
 
   // Distributor and Retail Location Results
-  const resultToggle = $(".jsShowMoreCollection");
-  const showMoreResults = $(".jsShowMore");
+  const $resultToggle = $(".jsShowMoreCollection");
+  const $showMoreResults = $(".jsShowMore");
+  const $loadMoreDistributors = $(".jsShowMoreDistributors");
 
   function toggleNested(btn) {
     const $button = $(btn);
@@ -49,7 +50,7 @@
     }
   }
 
-  $(resultToggle).click(function(event) {
+  $resultToggle.click(function(event) {
     event.preventDefault();
     toggleNested(this);
   });
@@ -66,32 +67,43 @@
     $collection.children(".nested:not(:visible:lt(5))").addClass("d-block");
   }
 
-  $(showMoreResults).click(function(event) {
+  $showMoreResults.click(function(event) {
     event.preventDefault();
     showMore(this);
   });
 
-  // Tool Tips
-  $('[data-toggle="tooltip"]').tooltip({
-    position: { my: "left+15 center", at: "right center" }
+  function showMoreDistributors(btn) {
+    const $button = $(btn);
+    const $showLess = $button.next('a');
+    const $collection = $(btn).parents(".result");
+    const $hidden = $collection.children(".collection:not(:visible)");
+    const $hiddenLength = $hidden.length;
 
+    if (!$hiddenLength || $hiddenLength <= 5) {
+      $button.addClass("hidden");
+      $showLess.removeClass("hidden");
+    }
+
+    $collection.children(".collection.hidden:lt(5)").removeClass("hidden");
+
+    $showLess.click(function(event) {
+      event.preventDefault();
+      $collection.children(".collection:gt(4)").addClass("hidden");
+      $button.removeClass("hidden");
+      $showLess.addClass("hidden");
+    });
+  }
+
+  $loadMoreDistributors.click(function(event) {
+    event.preventDefault();
+    showMoreDistributors(this);
   });
 
+  // Popover for distributor partner tiers
+  $('[data-toggle="popover"]').popover();
+
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  });
 
 }());
-// STICKY
-// $(window).scroll(function() {
-//   var $sticky = $(".sticky-wrap");
-//   var $stickyOffset = $sticky.offset().top;
-//   var $windowOffset = $(window).scrollTop();
-//
-//   console.log($windowOffset);
-//   console.log($stickyOffset);
-//
-//   if ($windowOffset >= $stickyOffset) {
-//     $sticky.addClass('sticky');
-//   } else {
-//     $sticky.removeClass('sticky');
-//   }
-
-// });

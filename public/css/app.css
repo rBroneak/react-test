@@ -97,7 +97,7 @@ body::before {
 /* changes width of retailer card links */
 @media only screen and (min-width: 577px) {
   .buyonlineitem {
-    max-width: calc(20% - 16px);
+    max-width: calc(25% - 16px);
     max-height: 180px; } }
 
 @media only screen and (min-width: 993px) {
@@ -153,12 +153,21 @@ body::before {
 .btn.btn--small {
   font-size: .8125rem; }
 
-/* tool tip */
-.ui-tooltip-content {
-  font-family: Roboto, Arial, sans-serif;
-  border-radius: 5px;
-  font-size: .85rem;
-  line-height: 1.5; }
+/* popover for distributors */
+.popover {
+  background: white;
+  border-radius: 0.25rem;
+  border: 1px solid #9b9b9b;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65); }
+  @media (max-width: 400px) {
+    .popover {
+      left: 2rem !important; } }
+  @media only screen and (min-width: 577px) {
+    .popover {
+      max-width: 500px; } }
+  .popover:hover {
+    cursor: pointer; }
 
 /* sticky */
 .sticky-wrap {

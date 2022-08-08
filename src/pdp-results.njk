@@ -87,8 +87,9 @@
 							</div>
 							<div class="col-12 col-md-3 py-2">
 								<div class="dl-select bg-transparent w-100">
-									<select name="search-radius-unit" class="js-tabbed-content-select color-black pr-1"
-											id="search-radius-unit">
+									<label for="country-select" class="hidden">Select Country</label>
+									<select aria-label="Country Select" name="country-select" class="js-tabbed-content-select color-black pr-1"
+											id="country-select">
 										<option value="unitedstates">United States</option>
 										<option value="canada">Canada</option>
 									</select>
@@ -116,22 +117,7 @@
 						{% if results == true %}
 						<!-- UPDATE result header -->
 						<div class="row">
-							<header class="result-header col-12 py-2">
-								<div class="d-flex">
-									<div class="col-3">
-										<p class="small color-light-gray m-0 p-0 bold">Sold by</p>
-									</div>
-									<div class="col-3">
-										<p class="small color-light-gray m-0 p-0 bold">Details</p>
-									</div>
-									<div class="col-3">
-										<p class="small color-light-gray m-0 p-0 bold">Services Offered</p>
-									</div>
-									<div class="col-3">
-										<p class="small color-light-gray m-0 p-0 bold">Distance</p>
-									</div>
-								</div>
-							</header>
+							{% include "partials/results-header-block.njk" %}
 							<!-- results -->
 							<div class="results col-12 mb-4">
 								{% include "partials/location-result-block.njk" %}

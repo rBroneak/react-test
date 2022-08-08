@@ -31,7 +31,7 @@
 				</div>
 				<div class="col-4 p-0">
 					<div class="dl-select bg-transparent ">
-						<select name="search-radius" class="color-black" id="search-radius">
+						<select aria-label="Search Radius" name="search-radius" class="color-black" id="search-radius">
 							<option value="10" selected="">10</option>
 							<option value="25">25</option>
 							<option value="50">50</option>
@@ -41,7 +41,7 @@
 				</div>
 				<div class="col-8 p-0">
 					<div class="dl-select bg-transparent">
-						<select name="search-radius-unit" class="color-black"
+						<select aria-label="Search Units" name="search-radius-unit" class="color-black"
 								id="search-radius-unit">
 							<option value="mi">Miles</option>
 							<option value="km">Kilometers</option>
@@ -53,11 +53,11 @@
 		<div class="col-12 col-lg-3 pt-4 pt-lg-0 dl-filters">
 			<div class="d-flex flex-wrap flex-row justify-content-start">
 				<div class="col-12 p-0">
-					<label for="search-radius" class="h7 text-align--left">Services</label>
+					<label for="services" class="h7 text-align--left">Services</label>
 				</div>
 				<div class="col-12 p-0">
 					<div class="dl-select bg-transparent">
-						<select name="search-radius" class="color-black" id="services">
+						<select aria-label="Services" name="services" class="color-black" id="services">
 							<option value="Service Center" selected="">Service Center</option>
 							<option value="Service Type 1">Service Type 1</option>
 							<option value="Service Type 2">Service Type 2</option>
@@ -69,12 +69,15 @@
 	</div>
 </div>
 <section class="d-flex flex-wrap flex-row justify-content-between">
-	<div class="col-6 pl-0">
+	<div class="col-12 col-sm-6 pl-0">
 		<p class="small color-light-gray">Graco cannot guarantee product will be in stock or available for purchase. Please contact your retailer
 			for pricing and availability. Some product subject to special order status.</p>
 	</div>
-	<div class="col-auto pr-0">
-		{% if results !== true %}<p>0 results</p>{% endif %}
-		{% if results == true %}<p>2 results results withing 10 miles of 55401</p>{% endif %}
+	<div class="col-auto px-0 pl-sm-2 mt-sm-2">
+		{%- if results !== true -%}
+			0 results
+		{%- else -%}
+			2 results withing 10 miles of 55402
+		{%- endif -%}
 	</div>
 </section>
